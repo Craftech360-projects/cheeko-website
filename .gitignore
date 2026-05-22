@@ -5,3 +5,4 @@ dist
 coverage
 .env*.local
 .DS_Store
+.vercel
