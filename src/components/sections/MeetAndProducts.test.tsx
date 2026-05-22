@@ -15,7 +15,7 @@ describe('Meet Cheeko and products', () => {
   it('renders Pro and Basic product cards with prices and buying actions', () => {
     render(<Home />);
 
-    expect(screen.getByRole('heading', { level: 3, name: /Cheeko Pro/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 3, name: /^Cheeko Pro$/i })).toBeInTheDocument();
     expect(screen.getByText(/₹ 4,990/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Buy Cheeko Pro/i })).toBeInTheDocument();
 

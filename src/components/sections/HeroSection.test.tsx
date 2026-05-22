@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import Home from '@/app/page';
 import { HeroSection } from './HeroSection';
@@ -7,14 +7,16 @@ describe('Hero section', () => {
   it('renders the launch offer, navigation, and accessible cart action', () => {
     render(<Home />);
 
+    const primaryNavigation = screen.getByRole('navigation', { name: /Primary navigation/i });
+
     expect(screen.getByLabelText(/Launch offer: 20% off with code FIRSTUSER/i)).toBeInTheDocument();
     expect(screen.getAllByText(/FIRSTUSER/i).length).toBeGreaterThan(0);
-    expect(screen.getByRole('link', { name: /Features/i })).toHaveAttribute('href', '#features');
-    expect(screen.getByRole('link', { name: /Cards/i })).toHaveAttribute('href', '#cards');
-    expect(screen.getByRole('link', { name: /Try Demo/i })).toHaveAttribute('href', '#demo');
-    expect(screen.getByRole('link', { name: /Reviews/i })).toHaveAttribute('href', '#reviews');
+    expect(within(primaryNavigation).getByRole('link', { name: /Features/i })).toHaveAttribute('href', '#features');
+    expect(within(primaryNavigation).getByRole('link', { name: /Cards/i })).toHaveAttribute('href', '#cards');
+    expect(within(primaryNavigation).getByRole('link', { name: /Try Demo/i })).toHaveAttribute('href', '#demo');
+    expect(within(primaryNavigation).getByRole('link', { name: /Reviews/i })).toHaveAttribute('href', '#reviews');
     expect(screen.getByRole('button', { name: /Open cart/i })).toBeInTheDocument();
-    expect(screen.getByAltText('Cheeko')).toHaveClass('h-11', 'sm:h-14');
+    expect(within(screen.getByRole('link', { name: /Cheeko home/i })).getByAltText('Cheeko')).toHaveClass('h-11', 'sm:h-14');
   });
 
   it('renders the approved hero positioning and a simple early-access form', () => {

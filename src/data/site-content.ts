@@ -144,6 +144,109 @@ export const siteContent = {
       }
     ]
   },
+  reviews: {
+    eyebrow: 'Parent proof',
+    title: 'What Parents are Saying',
+    description:
+      'Early families are responding to Cheeko as a playful alternative to handing kids a phone.',
+    stats: [
+      { value: '50+', label: 'Happy Reviews' },
+      { value: '4.5', label: 'Avg Rating' },
+      { value: '1 hr', label: 'Screen time reduced' }
+    ],
+    testimonials: [
+      {
+        quote:
+          'Cheeko made story time easier. My child asks for songs and stories without reaching for my phone.',
+        author: 'Aarav’s mom',
+        role: 'Parent of a 5-year-old'
+      },
+      {
+        quote:
+          'I wanted something playful but safer than a mobile. Cheeko feels like a companion, not a feed.',
+        author: 'Mira',
+        role: 'Gift buyer'
+      },
+      {
+        quote:
+          'The language play is the surprise. My daughter loves hearing familiar words from Cheeko.',
+        author: 'Nisha',
+        role: 'Parent of a 7-year-old'
+      },
+      {
+        quote:
+          'It keeps play focused. Cards, stories, and radio make it feel intentional instead of endless scrolling.',
+        author: 'Rahul',
+        role: 'Parent of two'
+      }
+    ]
+  },
+  originals: {
+    eyebrow: 'Cheeko Originals',
+    title: 'Cheeko Originals',
+    description:
+      'A growing world of kid-safe stories, podcasts, songs, and audio adventures made for curious little listeners.',
+    badge: 'Coming soon'
+  },
+  journey: {
+    eyebrow: 'From spark to launch',
+    title: 'Our Journey',
+    description: 'A small idea becoming a companion kids can talk to, play with, and grow alongside.',
+    steps: [
+      {
+        title: 'The Spark',
+        description: 'We asked what kids could use instead of another phone screen.'
+      },
+      {
+        title: 'First Play',
+        description: 'Stories, cards, and voice play shaped the earliest Cheeko moments.'
+      },
+      {
+        title: 'Cheeko Landed',
+        description: 'The device became a playful companion with a friendly fox personality.'
+      },
+      {
+        title: 'Cheeko Pre Testing',
+        description: 'Families helped us tune safety, content, routines, and language play.'
+      },
+      {
+        title: 'Cheeko Pro Launch',
+        description: 'Cheeko Pro prepares to bring richer AI companion experiences to homes.'
+      }
+    ]
+  },
+  footer: {
+    tagline: 'Built with love for curious kids',
+    description:
+      'Cheeko is a phone-free AI companion for stories, games, languages, routines, radio, and everyday imagination.',
+    contact: {
+      email: 'hello@cheeko.ai',
+      phone: '+91 99999 99999'
+    },
+    columns: [
+      {
+        title: 'Explore',
+        links: [
+          { label: 'Features', href: '#features' },
+          { label: 'Cards', href: '#cards' },
+          { label: 'Reviews', href: '#reviews' }
+        ]
+      },
+      {
+        title: 'Company',
+        links: [
+          { label: 'Journey', href: '#journey' },
+          { label: 'Originals', href: '#originals' },
+          { label: 'Contact', href: 'mailto:hello@cheeko.ai' }
+        ]
+      }
+    ],
+    social: [
+      { label: 'Instagram', href: 'https://instagram.com' },
+      { label: 'LinkedIn', href: 'https://linkedin.com' },
+      { label: 'YouTube', href: 'https://youtube.com' }
+    ]
+  },
   sprintOne: {
     title: 'Cheeko website foundation',
     description:

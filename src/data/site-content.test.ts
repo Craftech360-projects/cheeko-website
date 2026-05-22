@@ -26,4 +26,16 @@ describe('siteContent', () => {
     ]);
     expect(siteContent.ageStages.cards.map((card) => card.range)).toEqual(['Age 4-6', 'Age 7-9', 'Age 10-12']);
   });
+
+  it('contains Sprint 6 social proof, originals, journey, and footer content', () => {
+    expect(siteContent.reviews.title).toBe('What Parents are Saying');
+    expect(siteContent.reviews.stats.map((stat) => stat.label)).toEqual([
+      'Happy Reviews',
+      'Avg Rating',
+      'Screen time reduced'
+    ]);
+    expect(siteContent.originals.title).toBe('Cheeko Originals');
+    expect(siteContent.journey.title).toBe('Our Journey');
+    expect(siteContent.footer.contact.email).toBe('hello@cheeko.ai');
+  });
 });
