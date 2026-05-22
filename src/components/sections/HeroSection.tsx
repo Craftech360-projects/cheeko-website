@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { assets } from '@/data/assets';
 import { siteContent } from '@/data/site-content';
-import { Button } from '@/components/ui/Button';
+import { EarlyAccessForm } from './EarlyAccessForm';
 
 export function HeroSection() {
   return (
@@ -34,20 +34,7 @@ export function HeroSection() {
           <p className="mt-4 hidden max-w-xl text-sm font-bold leading-6 text-white/92 sm:mt-5 sm:block sm:text-lg sm:leading-8">
             {siteContent.hero.supportingCopy}
           </p>
-          <form className="mt-5 max-w-xl space-y-3 sm:mt-7 sm:flex sm:items-center sm:gap-3 sm:space-y-0" aria-label="Early access signup">
-            <label className="sr-only" htmlFor="hero-email">
-              Email address
-            </label>
-            <input
-              id="hero-email"
-              type="email"
-              placeholder={siteContent.hero.emailPlaceholder}
-              className="min-h-13 w-full rounded-2xl border-2 border-white/70 bg-white/94 px-4 text-base font-bold text-cheeko-ink shadow-[0_12px_28px_rgba(0,0,0,0.2)] outline-none transition placeholder:text-stone-400 focus:border-cheeko-orange focus:ring-4 focus:ring-cheeko-yellow/35 sm:min-h-14 sm:flex-1 sm:px-5"
-            />
-            <Button type="submit" className="min-h-13 w-full uppercase tracking-wide sm:min-h-14 sm:w-auto sm:px-7">
-              {siteContent.hero.cta}
-            </Button>
-          </form>
+          <EarlyAccessForm />
           <div className="mt-3 flex flex-col gap-3 sm:hidden">
             <a href="#meet" className="inline-flex min-h-11 items-center justify-center rounded-2xl bg-white/88 px-6 py-3 font-display text-sm font-black uppercase tracking-[0.12em] text-cheeko-ink shadow-cheeko-card">
               See how it works

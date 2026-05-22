@@ -29,7 +29,7 @@ export const assets = {
     playAnytime: '/assets/app/play-anytime-card.png'
   },
   originals: {
-    section: '/assets/originals/cheeko-orginals.png'
+    section: '/assets/originals/orginals-pic.png'
   },
   footer: {
     people: '/assets/footer/footer-people.png'

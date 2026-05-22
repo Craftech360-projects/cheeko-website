@@ -39,4 +39,14 @@ describe('Sprint 6 social proof, originals, journey, and footer', () => {
     expect(within(footer).getAllByRole('link', { name: /Contact/i })[0]).toHaveAttribute('href', 'mailto:hello@cheeko.ai');
     expect(within(footer).getByText(/Built with love for curious kids/i)).toBeInTheDocument();
   });
+
+  it('groups footer navigation into a compact mobile-friendly grid', () => {
+    render(<Home />);
+
+    const footerNavigation = screen.getByRole('navigation', { name: /Footer navigation/i });
+
+    expect(footerNavigation).toHaveClass('grid-cols-2');
+    expect(within(footerNavigation).getByRole('navigation', { name: /Explore footer links/i })).toBeInTheDocument();
+    expect(within(footerNavigation).getByRole('navigation', { name: /Company footer links/i })).toBeInTheDocument();
+  });
 });

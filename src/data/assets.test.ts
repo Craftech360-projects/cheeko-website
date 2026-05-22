@@ -12,7 +12,7 @@ describe('assets', () => {
 
   it('uses actual filenames exported from Figma', () => {
     expect(assets.features.routine).toBe('/assets/product/feature-routine.png');
-    expect(assets.originals.section).toBe('/assets/originals/cheeko-orginals.png');
+    expect(assets.originals.section).toBe('/assets/originals/orginals-pic.png');
     expect(assets.footer.people).toBe('/assets/footer/footer-people.png');
   });
 });
