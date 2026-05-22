@@ -1,0 +1,70 @@
+{
+  "logo": {
+    "mainSvg": "/assets/logo/cheeko-logo.svg",
+    "fallbackPng": "/assets/logo/cheeko-logo.png"
+  },
+  "hero": {
+    "desktop": "/assets/hero/hero-child-device.jpg",
+    "mobile": "/assets/hero/hero-child-device-mobile.jpg",
+    "meetCheeko": "/assets/hero/meet-cheeko-child-device.jpg"
+  },
+  "product": {
+    "pro": "/assets/product/cheeko-pro.png",
+    "basic": "/assets/product/cheeko-basic.png",
+    "deviceFront": "/assets/product/cheeko-device-front.png",
+    "deviceAngle": "/assets/product/cheeko-device-angle.png",
+    "deviceWithCards": "/assets/product/cheeko-device-with-cards.jpg"
+  },
+  "features": {
+    "routine": "/assets/product/feature-routine.png",
+    "imaginativePlay": "/assets/product/feature-imaginative-play.png",
+    "creativity": "/assets/product/feature-creativity.png",
+    "age4to6": "/assets/product/age-4-6.png",
+    "age7to9": "/assets/product/age-7-9.png",
+    "age10to12": "/assets/product/age-10-12.png"
+  },
+  "app": {
+    "childBestCompanionCard": "/assets/app/child-best-companion-card.png",
+    "parentControlCard": "/assets/app/parent-control-card.png",
+    "safeParentApprovedCard": "/assets/app/safe-parent-approved-card.png",
+    "playAnytimeCard": "/assets/app/play-anytime-card.png",
+    "parentTrustSection": "/assets/app/parent-trust-section.png",
+    "appStoreBadge": "/assets/app/app-store-badge.svg",
+    "playStoreBadge": "/assets/app/play-store-badge.svg"
+  },
+  "cards": {
+    "ai": "/assets/cards/ai-card.png",
+    "story": "/assets/cards/story-card.png",
+    "game": "/assets/cards/game-card.png",
+    "radio": "/assets/cards/radio-card.png",
+    "language": "/assets/cards/language-card.png",
+    "group": "/assets/cards/content-cards-group.png"
+  },
+  "reviews": {
+    "shivan": "/assets/reviews/review-shivan.png",
+    "nikitha": "/assets/reviews/review-nikitha.png",
+    "deepu": "/assets/reviews/review-deepu.png",
+    "parent4": "/assets/reviews/review-parent-4.png"
+  },
+  "originals": {
+    "section": "/assets/originals/cheeko-orginals.png",
+    "microphone": "/assets/originals/originals-microphone.png",
+    "device": "/assets/originals/originals-device.png",
+    "background": "/assets/originals/originals-background.png"
+  },
+  "journey": {
+    "line": "/assets/journey/journey-line.svg",
+    "star": "/assets/journey/journey-star.svg",
+    "timeline": "/assets/journey/journey-timeline.png"
+  },
+  "footer": {
+    "people": "/assets/footer/footer-people.png"
+  },
+  "icons": {
+    "cart": "/assets/icons/cart.svg",
+    "instagram": "/assets/icons/instagram.svg",
+    "linkedin": "/assets/icons/linkedin.svg",
+    "youtube": "/assets/icons/youtube.svg",
+    "x": "/assets/icons/x.svg"
+  }
+}

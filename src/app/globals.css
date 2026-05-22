@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Baloo 2', ui-rounded, system-ui, sans-serif;
+  --font-body: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+
+  --color-cheeko-yellow: #ffc400;
+  --color-cheeko-gold: #f8a900;
+  --color-cheeko-orange: #ff7900;
+  --color-cheeko-pink: #f95c9b;
+  --color-cheeko-cream: #fff7e8;
+  --color-cheeko-card: #fffaf0;
+  --color-cheeko-ink: #24160f;
+  --color-cheeko-brown: #6d4a32;
+  --color-cheeko-line: #eadcc8;
+
+  --shadow-cheeko-card: 0 18px 45px rgba(70, 41, 12, 0.18);
+  --shadow-cheeko-button: 0 8px 0 rgba(177, 57, 96, 0.26), 0 16px 28px rgba(249, 92, 155, 0.24);
+}
+
+:root {
+  --background: #fff7e8;
+  --foreground: #24160f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #ffc400;
+  color: #24160f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes promo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.cheeko-action-button {
+  background: linear-gradient(180deg, #ff6aa8 0%, #f95c9b 100%);
+  border: 3px solid #24160f;
+  box-shadow: 0 8px 0 #24160f, 0 18px 30px rgba(249, 92, 155, 0.28);
+  color: #24160f;
+}
+
+.cheeko-action-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.cheeko-action-button:active {
+  box-shadow: 0 3px 0 #24160f, 0 10px 18px rgba(249, 92, 155, 0.2);
+  transform: translateY(5px);
+}
+
+.cheeko-disabled-button {
+  background: #d6d3d1;
+  border: 3px solid #8d867f;
+  box-shadow: none;
+  color: #57534e;
+}
