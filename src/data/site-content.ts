@@ -46,41 +46,41 @@ export const siteContent = {
     {
       name: 'Cheeko Pro',
       price: '₹ 4,990',
-      imageKey: 'pro',
-      cta: 'Buy Cheeko Pro',
+      imageKey: 'proCard',
+      cta: 'Pre Order',
       badge: 'Best for curious explorers',
-      description: 'Advanced companion experience for richer conversations, learning, and content play.',
+      description: 'Full featured companion with screen for visual interaction and games.',
       status: 'Available'
     },
     {
       name: 'Cheeko Basic',
       price: '₹ 3,990',
-      imageKey: 'basic',
-      cta: 'Buy Cheeko Basic',
+      imageKey: 'basicCard',
+      cta: 'Buy',
       badge: 'Great starter companion',
-      description: 'A simpler Cheeko experience for everyday stories, play, and kid-safe discovery.',
-      status: 'Sold out'
+      description: 'Audio companion for distraction free learning and storytelling.',
+      status: 'Available'
     }
   ],
 
   capabilities: {
     eyebrow: 'What Cheeko can do',
-    title: 'From routines to wild imagination, Cheeko joins every moment.',
+    title: 'Your child can talk to Cheeko in their mother tongue. Learning feels natural when it happens in a familiar language.',
     cards: [
       {
-        title: 'Daily Routines',
+        title: 'Routine',
         imageKey: 'routine',
-        description: 'Cheeko helps kids build small habits with friendly reminders, morning prompts, and bedtime nudges.'
+        description: 'From routines to wild imagination, Cheeko joins every moment.'
       },
       {
         title: 'Imaginative Play',
         imageKey: 'imaginativePlay',
-        description: 'Kids can jump into stories, pretend worlds, character play, and curious what-if conversations.'
+        description: 'From routines to wild imagination, Cheeko joins every moment.'
       },
       {
-        title: 'Creative Learning',
+        title: 'Creativity',
         imageKey: 'creativity',
-        description: 'Games, languages, quizzes, songs, and activities turn learning into playful discovery.'
+        description: 'From routines to wild imagination, Cheeko joins every moment.'
       }
     ]
   },
@@ -122,25 +122,27 @@ export const siteContent = {
     ]
   },
   ageStages: {
-    eyebrow: 'Grows with your child',
-    title: 'A companion for every stage of childhood',
-    description:
-      'From simple stories to independent discovery, Cheeko adapts the experience as kids grow more curious.',
+    eyebrow: '',
+    title: 'For every age, a purpose',
+    description: '',
     cards: [
       {
-        range: 'Age 4-6',
+        range: 'Age 3-5',
         imageKey: 'age4to6',
-        description: 'Gentle stories, songs, routines, and simple prompts for early imagination.'
+        subtitle: 'Curiosity & Discovery',
+        description: 'Simple answers, fun stories and everyday learning.'
       },
       {
-        range: 'Age 7-9',
+        range: 'Age 5-7',
         imageKey: 'age7to9',
-        description: 'Games, languages, quizzes, and creative play for growing curiosity.'
+        subtitle: 'Explore & Learn',
+        description: 'Deeper knowledge, new skills and creative expression.'
       },
       {
-        range: 'Age 10-12',
+        range: 'Age 7-10',
         imageKey: 'age10to12',
-        description: 'Richer conversations, independent learning, radio, and content-card discovery.'
+        subtitle: 'Think & Create',
+        description: 'Complex ideas, problem solving and independent learning.'
       }
     ]
   },

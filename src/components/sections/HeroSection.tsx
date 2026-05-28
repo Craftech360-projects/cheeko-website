@@ -2,46 +2,95 @@ import Image from 'next/image';
 import { assets } from '@/data/assets';
 import { siteContent } from '@/data/site-content';
 import { EarlyAccessForm } from './EarlyAccessForm';
+import { Globe, Brain, BookOpen } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-cheeko-ink text-white lg:min-h-[calc(100dvh-104px)]">
+    <section id="top" className="relative w-full h-[90dvh] overflow-hidden bg-cheeko-ink">
+      {/* Background Image Spread */}
       <Image
         src={assets.hero.desktop}
-        alt="Child smiling beside the yellow Cheeko companion device"
+        alt="Child playing with Cheeko"
         fill
         priority
-        sizes="100vw"
-        className="-z-20 object-cover object-[82%_center] sm:object-center"
+        className="object-cover object-[85%_center] lg:object-right"
       />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(36,22,15,0.72)_0%,rgba(36,22,15,0.42)_46%,rgba(36,22,15,0.16)_100%)] sm:bg-[linear-gradient(90deg,rgba(36,22,15,0.74)_0%,rgba(36,22,15,0.42)_46%,rgba(36,22,15,0.18)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-cheeko-yellow/90 via-cheeko-yellow/20 to-transparent" />
+      
+      {/* Subtle Overlay */}
+      <div className="absolute inset-0 bg-black/5" />
 
-      <div data-testid="hero-layout" className="mx-auto flex min-h-[calc(100dvh-104px)] max-w-7xl items-start px-4 pb-7 pt-8 sm:px-8 sm:pb-10 sm:pt-10 lg:items-end lg:px-10 lg:pb-16">
-        <div className="max-w-3xl pt-4 text-left sm:pb-2 sm:pt-0 lg:pb-10">
-          <p className="inline-flex rounded-full bg-cheeko-yellow px-3.5 py-1.5 font-display text-xs font-black uppercase tracking-[0.14em] text-cheeko-ink shadow-cheeko-card sm:px-4 sm:py-2 sm:text-sm">
-            Phone-free companion for ages {siteContent.audience.ageRange}
-          </p>
-          <h1 className="mt-4 hidden max-w-4xl font-display text-5xl font-black leading-[0.9] tracking-[-0.04em] text-white drop-shadow-[0_5px_18px_rgba(0,0,0,0.42)] sm:block sm:text-6xl lg:text-7xl">
-            {siteContent.positioning.statement}
-          </h1>
-          <h1 className="mt-4 max-w-xs font-display text-[3.35rem] font-black leading-[0.86] tracking-[-0.05em] text-white drop-shadow-[0_5px_18px_rgba(0,0,0,0.42)] sm:hidden">
-            {siteContent.positioning.mobileStatement}
-          </h1>
-          <p className="mt-3 max-w-sm text-lg font-black leading-6 text-white sm:hidden">
-            {siteContent.positioning.mobileSubhead}
-          </p>
-          <p className="mt-4 hidden max-w-xl text-sm font-bold leading-6 text-white/92 sm:mt-5 sm:block sm:text-lg sm:leading-8">
-            {siteContent.hero.supportingCopy}
-          </p>
-          <EarlyAccessForm />
-          <div className="mt-3 flex flex-col gap-3 sm:hidden">
-            <a href="#meet" className="inline-flex min-h-11 items-center justify-center rounded-2xl bg-white/88 px-6 py-3 font-display text-sm font-black uppercase tracking-[0.12em] text-cheeko-ink shadow-cheeko-card">
-              See how it works
-            </a>
+      {/* Grid Container for Card Positioning */}
+      <div className="relative h-full container mx-auto px-4 sm:px-10 lg:px-20 flex items-end pb-8 sm:pb-12 lg:pb-16">
+        <div className="w-full flex justify-start">
+          
+          {/* THE CHEEKO PRO SQUARE CARD - Tightened Spacing */}
+          <div className="w-full max-w-[400px] sm:max-w-[440px] aspect-square bg-white rounded-[2.5rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] flex flex-col justify-center p-6 sm:p-8 border border-white/40 overflow-hidden">
+            
+            {/* Badge */}
+            <div className="flex justify-center mb-3 sm:mb-4">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF0F6] px-3 py-1 text-[9px] sm:text-[10px] font-black text-cheeko-pink uppercase tracking-[0.2em] border border-pink-100">
+                <span className="text-sm">✦</span> {siteContent.hero.eyebrow}
+              </span>
+            </div>
+
+            {/* Title & Description */}
+            <div className="text-center mb-4 sm:mb-5">
+              <h1 className="font-display text-3xl sm:text-4xl font-black text-cheeko-ink leading-tight mb-2">
+                {siteContent.hero.productName}
+              </h1>
+              <p className="text-stone-500 text-[13px] sm:text-sm font-bold max-w-[260px] mx-auto leading-relaxed">
+                Cheeko is a magical AI companion that <span className="text-purple-500">talks</span>, <span className="text-pink-500">listens</span>, <span className="text-green-500">plays</span>, and <span className="text-orange-500">grows</span> with your child.
+              </p>
+            </div>
+
+            {/* Features Row */}
+            <div className="grid grid-cols-3 gap-2 mb-5 sm:mb-6">
+              <div className="flex flex-col items-center gap-1.5">
+                <div className="w-9 h-9 flex items-center justify-center bg-purple-50 rounded-xl text-purple-600">
+                  <Globe size={18} />
+                </div>
+                <div className="text-center">
+                  <p className="text-xs font-black text-cheeko-ink leading-none">15+</p>
+                  <p className="text-[8px] font-bold text-stone-400 uppercase mt-0.5">Languages</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center gap-1.5">
+                <div className="w-9 h-9 flex items-center justify-center bg-green-50 rounded-xl text-green-600">
+                  <Brain size={18} />
+                </div>
+                <div className="text-center">
+                  <p className="text-xs font-black text-cheeko-ink leading-none">Cognitive</p>
+                  <p className="text-[8px] font-bold text-stone-400 uppercase mt-0.5 whitespace-nowrap">Boost</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center gap-1.5">
+                <div className="w-9 h-9 flex items-center justify-center bg-yellow-50 rounded-xl text-yellow-600">
+                  <BookOpen size={18} />
+                </div>
+                <div className="text-center">
+                  <p className="text-xs font-black text-cheeko-ink leading-none">100+</p>
+                  <p className="text-[8px] font-bold text-stone-400 uppercase mt-0.5">Contents</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Form CTA */}
+            <div className="text-center mb-3">
+              <p className="text-[10px] font-black text-stone-400 uppercase tracking-tighter">
+                ✨ Join the Waitlist for <span className="text-cheeko-pink">2026</span> Release ✨
+              </p>
+            </div>
+            <div className="px-1">
+              <EarlyAccessForm />
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+
+

@@ -1,36 +1,50 @@
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 import { assets } from '@/data/assets';
-import { siteContent } from '@/data/site-content';
 
 export function MeetCheeko() {
   return (
-    <section id="meet" className="relative overflow-hidden bg-cheeko-yellow px-4 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
-      <div className="absolute left-[-8rem] top-10 h-72 w-72 rounded-full bg-white/25 blur-3xl" />
-      <div className="absolute bottom-[-8rem] right-[-4rem] h-80 w-80 rounded-full bg-cheeko-orange/25 blur-3xl" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.82fr_1.18fr]">
-        <div className="max-w-xl">
-          <p className="font-display text-sm font-black uppercase tracking-[0.18em] text-cheeko-brown">Phone-free kid tech</p>
-          <h2 className="mt-3 font-display text-5xl font-black leading-[0.9] tracking-[-0.04em] text-cheeko-ink sm:text-6xl lg:text-7xl">
-            {siteContent.meet.title}
+    <section id="meet" className="relative overflow-hidden bg-cheeko-yellow px-6 py-16 sm:px-12 sm:py-24 lg:px-20 lg:py-32">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        
+        {/* Left Content */}
+        <div className="max-w-xl order-2 lg:order-1">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-cheeko-ink">
+            Childhood deserves <br className="hidden sm:block" />
+            <span className="text-cheeko-pink">better technology.</span>
           </h2>
-          <p className="mt-5 text-lg font-extrabold leading-8 text-cheeko-brown sm:text-xl">
-            {siteContent.meet.description}
+          
+          <p className="mt-6 text-lg sm:text-xl lg:text-2xl font-bold text-cheeko-ink/80 leading-relaxed max-w-md lg:max-w-none">
+            AI built for curiosity, imagination and growth.
           </p>
-          <p className="mt-5 rounded-3xl border-2 border-cheeko-ink/10 bg-white/55 px-5 py-4 text-base font-bold leading-7 text-cheeko-ink shadow-cheeko-card backdrop-blur">
-            {siteContent.meet.accent}
-          </p>
+
+          <div className="mt-10 lg:mt-24">
+            <a 
+              href="#features" 
+              className="inline-flex items-center gap-2 text-base sm:text-lg font-black text-cheeko-ink hover:gap-4 transition-all group"
+            >
+              Explore Features 
+              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </div>
-        <div className="relative mx-auto w-full max-w-3xl rotate-0 rounded-[2rem] bg-white/55 p-3 shadow-[0_22px_70px_rgba(83,54,0,0.25)] sm:rounded-[2.5rem] sm:p-4 lg:rotate-1">
-          <Image
-            src={assets.hero.meetCheeko}
-            alt="A child relaxing with Cheeko and content cards"
-            width={1100}
-            height={900}
-            sizes="(max-width: 1024px) 100vw, 58vw"
-            className="aspect-[1.18/1] rounded-[1.5rem] object-cover sm:rounded-[2rem]"
-          />
+
+        {/* Right Image - Sharper Corners */}
+        <div className="relative aspect-[1.1/1] w-full sm:max-w-2xl mx-auto lg:max-w-none order-1 lg:order-2">
+          <div className="relative h-full w-full overflow-hidden rounded-3xl sm:rounded-[2.5rem] shadow-2xl">
+            <Image
+              src={assets.hero.meetCheeko}
+              alt="Child laughing with Cheeko device"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
+
+

@@ -11,6 +11,8 @@
   "product": {
     "pro": "/assets/product/cheeko-pro.png",
     "basic": "/assets/product/cheeko-basic.png",
+    "proCard": "/assets/product/cheeko-pro-card.png",
+    "basicCard": "/assets/product/cheeko-basic-card.png",
     "deviceFront": "/assets/product/cheeko-device-front.png",
     "deviceAngle": "/assets/product/cheeko-device-angle.png",
     "deviceWithCards": "/assets/product/cheeko-device-with-cards.jpg"

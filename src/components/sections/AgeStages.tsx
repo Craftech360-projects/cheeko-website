@@ -46,25 +46,29 @@ export function AgeStages() {
       </svg>
       <div className="relative mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-display text-sm font-black uppercase tracking-[0.18em] text-cheeko-orange drop-shadow-[0_2px_0_rgba(255,255,255,0.35)]">
-            {siteContent.ageStages.eyebrow}
-          </p>
+          {siteContent.ageStages.eyebrow ? (
+            <p className="font-display text-sm font-black uppercase tracking-[0.18em] text-cheeko-orange drop-shadow-[0_2px_0_rgba(255,255,255,0.35)]">
+              {siteContent.ageStages.eyebrow}
+            </p>
+          ) : null}
           <h2 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-black leading-[0.9] tracking-[-0.045em] text-cheeko-ink sm:text-5xl lg:text-6xl">
             {siteContent.ageStages.title}
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base font-black leading-7 text-cheeko-brown/85 sm:text-lg">
-            {siteContent.ageStages.description}
-          </p>
+          {siteContent.ageStages.description ? (
+            <p className="mx-auto mt-5 max-w-2xl text-base font-black leading-7 text-cheeko-brown/85 sm:text-lg">
+              {siteContent.ageStages.description}
+            </p>
+          ) : null}
         </div>
 
         <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8 lg:mt-16">
           {siteContent.ageStages.cards.map((card, index) => (
             <article
               key={card.range}
-              className={`group text-center transition duration-300 hover:-translate-y-2 hover:rotate-0 ${portraitStyles[index]}`}
+              className="group text-center transition duration-300 hover:-translate-y-2"
             >
               <div
-                className="mx-auto bg-transparent transition duration-300"
+                className={`mx-auto flex h-[24rem] items-end justify-center bg-transparent transition duration-300 ${portraitStyles[index]}`}
                 data-testid="age-stage-portrait"
               >
                 <Image
@@ -76,10 +80,13 @@ export function AgeStages() {
                   className={`mx-auto h-auto w-full drop-shadow-[0_24px_32px_rgba(109,74,50,0.2)] transition duration-500 group-hover:scale-105 ${portraitImageStyles[index]}`}
                 />
               </div>
-              <h3 className="mt-7 font-display text-3xl font-black leading-none tracking-[-0.03em] text-cheeko-ink sm:text-4xl">
+              <h3 className="mt-20 min-h-[2.4rem] font-display text-3xl font-black leading-none tracking-[-0.03em] text-cheeko-ink sm:text-4xl">
                 {card.range}
               </h3>
-              <p className="mx-auto mt-3 max-w-xs text-base font-bold leading-7 text-cheeko-brown/78 sm:text-lg">
+              <p className="mx-auto mt-2 min-h-[2.4rem] max-w-xs text-[1.7rem] font-medium leading-[1.16] text-cheeko-ink sm:text-2xl">
+                {card.subtitle}
+              </p>
+              <p className="mx-auto mt-2 min-h-[5.4rem] max-w-sm text-base font-bold leading-7 text-cheeko-brown/78 sm:text-lg">
                 {card.description}
               </p>
             </article>

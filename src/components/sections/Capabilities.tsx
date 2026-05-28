@@ -9,46 +9,47 @@ const featureImages = {
 } as const;
 
 const featureAlts = {
-  routine: 'A child using Cheeko for daily routines',
-  imaginativePlay: 'A child imagining a story with Cheeko',
-  creativity: 'Children exploring creativity with Cheeko'
+  routine: 'Child holding Cheeko outdoors',
+  imaginativePlay: 'Child imagining with Cheeko at a desk',
+  creativity: 'Children smiling while holding Cheeko'
 } as const;
 
 export function Capabilities() {
   return (
-    <section id="features" className="relative overflow-hidden bg-cheeko-cream px-4 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
-      <div className="absolute left-0 top-0 h-40 w-full bg-gradient-to-b from-cheeko-cream to-transparent" />
-      <div className="relative mx-auto max-w-7xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-4xl font-black leading-[0.92] tracking-[-0.04em] text-cheeko-ink sm:text-5xl lg:text-6xl">
+    <section
+      id="features"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#efe0a2_0%,#f2e4ab_54%,#f3e7bd_100%)] px-5 pb-12 pt-24 sm:px-8 sm:pb-16 sm:pt-28 lg:px-12 lg:pb-20"
+    >
+      <div className="mx-auto max-w-[2010px]">
+        <div className="mx-auto max-w-[1000px] text-center">
+          <h2 className="font-display text-[3.1rem] font-black leading-[0.94] text-black sm:text-[2.1rem]">
             {siteContent.capabilities.eyebrow}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base font-bold leading-7 text-cheeko-brown sm:text-lg">
+          <p className="mx-auto mt-8 max-w-[880px] text-[1.05rem] font-medium leading-[1.24] text-black/55 sm:text-[3rem] sm:leading-[1.16] md:text-[2.25rem] lg:text-[1.5rem]">
             {siteContent.capabilities.title}
           </p>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-3 lg:gap-8">
-          {siteContent.capabilities.cards.map((card, index) => (
-            <article
-              key={card.title}
-              className="group rounded-[2rem] border-4 border-white bg-white/74 p-3 shadow-cheeko-card transition duration-300 hover:-translate-y-1 hover:rotate-0 md:odd:rotate-[-1.5deg] md:even:rotate-[1.5deg]"
-            >
-              <div className="overflow-hidden rounded-[1.55rem] bg-cheeko-yellow">
+
+        <div className="mt-12 grid gap-12 md:grid-cols-3 md:gap-9 lg:mt-16 lg:gap-14">
+          {siteContent.capabilities.cards.map((card) => (
+            <article key={card.title} className="min-w-0 text-center md:text-left">
+              <div className="mx-auto w-[80%] overflow-hidden rounded-[2.25rem] bg-[#eadcb1] md:ml-0 md:mr-auto">
                 <Image
                   src={featureImages[card.imageKey]}
                   alt={featureAlts[card.imageKey]}
-                  width={720}
-                  height={840}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="aspect-[0.82/1] w-full object-cover transition duration-500 group-hover:scale-105"
+                  width={832}
+                  height={1136}
+                  sizes="(max-width: 768px) 90vw, 33vw"
+                  className="aspect-[0.733] w-full object-cover"
                 />
               </div>
-              <div className="px-2 pb-3 pt-5">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-cheeko-yellow font-display text-sm font-black text-cheeko-ink">
-                  {index + 1}
-                </span>
-                <h3 className="mt-3 font-display text-2xl font-black tracking-[-0.02em] text-cheeko-ink">{card.title}</h3>
-                <p className="mt-2 text-sm font-bold leading-6 text-cheeko-brown sm:text-base">{card.description}</p>
+              <div className="pt-8">
+                <h3 className="font-display text-3xl font-black leading-none text-black sm:text-4xl lg:text-[2rem]">
+                  {card.title}
+                </h3>
+                <p className="mx-auto mt-4 max-w-[36ch] text-[0.98rem] font-medium leading-[1.38] text-black/55 sm:text-[2rem] sm:leading-[1.16] md:mx-0 lg:text-[1.5rem] lg:leading-[1.11]">
+                  {card.description}
+                </p>
               </div>
             </article>
           ))}

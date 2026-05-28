@@ -1,51 +1,102 @@
 import Image from 'next/image';
+import { Volume2 } from 'lucide-react';
 import { assets } from '@/data/assets';
 import { siteContent } from '@/data/site-content';
 
 export function LanguageSection() {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#fff7e8_0%,#ffe3ed_48%,#fff7e8_100%)] px-4 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
-      <div className="absolute right-[-8rem] top-10 h-80 w-80 rounded-full bg-cheeko-pink/20 blur-3xl" />
-      <div className="absolute bottom-6 left-[-6rem] h-72 w-72 rounded-full bg-cheeko-yellow/35 blur-3xl" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-10">
-        <div className="relative mx-auto flex w-full max-w-lg justify-center lg:max-w-2xl">
-          <div className="absolute inset-x-6 bottom-8 h-16 rounded-full bg-cheeko-orange/35 blur-2xl" />
-          <div className="absolute top-10 h-72 w-72 rounded-full bg-cheeko-yellow/35 blur-3xl sm:h-96 sm:w-96" />
-          <Image
-            src={assets.product.deviceFront}
-            alt="Front of the Cheeko device showing the fox assistant"
-            width={900}
-            height={1266}
-            sizes="(max-width: 1024px) 72vw, (max-width: 1280px) 34rem, 38rem"
-            className="relative max-h-[44rem] w-[72vw] object-contain drop-shadow-[0_30px_34px_rgba(99,58,0,0.3)] sm:w-[48vw] lg:w-[34rem] xl:w-[38rem]"
-          />
-        </div>
-        <div>
-          <p className="font-display text-sm font-black uppercase tracking-[0.18em] text-cheeko-orange">{siteContent.language.eyebrow}</p>
-          <h2 className="mt-3 font-display text-4xl font-black leading-[0.92] tracking-[-0.04em] text-cheeko-ink sm:text-5xl lg:text-6xl">
+    <section className="relative overflow-hidden bg-[linear-gradient(90deg,#f0ebc7_0%,#f2dddb_100%)] px-4 pb-14 pt-14 sm:px-8 sm:pb-16 sm:pt-16 lg:px-10 lg:pb-14 lg:pt-12">
+      <div className="pointer-events-none absolute -right-32 top-0 h-full w-[62%] opacity-35">
+        <div className="absolute right-10 top-[-8rem] h-[48rem] w-[48rem] rounded-full border-[6px] border-[#8c8481]/45" />
+        <div className="absolute right-2 top-[-6rem] h-[46rem] w-[46rem] rounded-full border-[6px] border-[#8c8481]/45" />
+        <div className="absolute right-[-8rem] top-[-3rem] h-[44rem] w-[44rem] rounded-full border-[6px] border-[#8c8481]/45" />
+      </div>
+
+      <div className="relative mx-auto max-w-[1720px]">
+        <div className="mx-auto max-w-[980px] text-center">
+          <h2 className="font-display text-[2.1rem] font-black leading-[1.04] text-black sm:text-[2.4rem] lg:text-[3.4rem]">
             {siteContent.language.title}
           </h2>
-          <p className="mt-5 max-w-3xl text-lg font-extrabold leading-8 text-cheeko-brown sm:text-xl">
+          <p className="mx-auto mt-5 max-w-[930px] text-base font-medium leading-[1.26] text-black/58 sm:text-lg lg:text-[2rem] lg:leading-[1.14]">
             {siteContent.language.description}
           </p>
-          <div className="mt-8 rounded-[2rem] border-4 border-white bg-white/82 p-5 shadow-cheeko-card sm:p-7">
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-full bg-cheeko-pink px-4 py-2 font-display text-xs font-black uppercase tracking-[0.14em] text-cheeko-ink">
-                {siteContent.language.promptLabel}
-              </span>
-              <span className="rounded-full bg-cheeko-yellow px-4 py-2 font-display text-xs font-black uppercase tracking-[0.14em] text-cheeko-ink">
-                Tap to translate
-              </span>
+        </div>
+
+        <div className="relative mt-8 grid items-start gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:gap-6">
+          <div className="relative mx-auto w-full max-w-[360px] lg:max-w-[520px]">
+            <Image
+              src={assets.product.languageDevice}
+              alt="Front of the Cheeko device showing the fox assistant"
+              width={1080}
+              height={1520}
+              sizes="(max-width: 1024px) 70vw, 620px"
+              className="relative z-10 h-auto w-full scale-[1.01] object-contain lg:translate-x-[-1.8rem] lg:translate-y-5 lg:scale-[1.1]"
+            />
+          </div>
+
+          <div className="lg:pt-16">
+            <div className="relative mx-auto w-full max-w-[920px] overflow-hidden rounded-[1.6rem] shadow-[0_10px_16px_rgba(0,0,0,0.24)]">
+              <Image
+                src={assets.product.languagePanelBg}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="(max-width: 1024px) 92vw, 900px"
+                className="object-cover"
+              />
+              <div className="relative z-10 p-5 sm:p-6 lg:px-9 lg:py-8">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#fde8d2] text-cheeko-orange">
+                    <Volume2 className="h-6 w-6" />
+                  </span>
+                  <p className="text-lg font-medium text-[#5f5f5f] sm:text-xl lg:text-[1.8rem]">
+                    Speaking: <span className="font-semibold text-cheeko-orange">Kannada (ಕನ್ನಡ)</span>
+                  </p>
+                </div>
+
+                <div className="mt-6 grid grid-cols-[auto_1fr] items-center gap-4 sm:gap-6 lg:mt-7 lg:gap-6">
+                  <button
+                    type="button"
+                    className="inline-flex h-[7.25rem] w-[6rem] flex-col items-center justify-center rounded-[1.1rem] bg-[#ff7a0c] text-white shadow-[0_10px_14px_rgba(255,122,12,0.35)] lg:h-[9.5rem] lg:w-[7.5rem] lg:rounded-[1.35rem]"
+                    aria-label="Tap to listen"
+                  >
+                    <Volume2 className="h-7 w-7 lg:h-8 lg:w-8" />
+                    <span className="mt-2 text-[1rem] font-medium leading-[1.02] lg:text-[1.35rem]">Tap to</span>
+                    <span className="mt-1 text-[1rem] font-medium leading-[1.02] lg:text-[1.35rem]">Listen</span>
+                  </button>
+
+                  <div className="min-w-0">
+                    <p className="text-[1.6rem] font-medium leading-[1.12] text-[#1f1f1f] sm:text-[1.9rem] lg:text-[2.5rem]">
+                      {siteContent.language.prompt}
+                    </p>
+                    <div className="mt-3 h-2 w-24 rounded-full bg-[#f57ea5] lg:mt-4 lg:h-[0.34rem] lg:w-24" />
+                    <p className="mt-3 text-[1.08rem] font-medium text-[#4f4f4f] sm:text-[1.2rem] lg:mt-4 lg:text-[1.65rem]">
+                      Namaskara! Ninna hesaru enu?
+                    </p>
+                    <p className="mt-2 text-[1rem] font-medium text-[#767676] sm:text-[1.15rem] lg:mt-3 lg:text-[1.5rem]">
+                      Hello! What is your name?
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="mt-5 rounded-3xl bg-cheeko-cream p-5 text-cheeko-ink">
-              <p className="font-display text-2xl font-black leading-tight sm:text-3xl">{siteContent.language.prompt}</p>
-              <p className="mt-3 text-sm font-bold leading-6 text-cheeko-brown sm:text-base">{siteContent.language.response}</p>
-            </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {siteContent.language.chips.map((chip) => (
-                <span key={chip} className="rounded-2xl bg-cheeko-line/70 px-4 py-3 text-center font-display text-sm font-black text-cheeko-brown">
-                  {chip}
-                </span>
+
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-3">
+              {Array.from({ length: 10 }).map((_, index) => (
+                <div
+                  key={`lang-chip-${index}`}
+                  className="relative overflow-hidden rounded-[1.1rem] shadow-[0_7px_12px_rgba(0,0,0,0.16)]"
+                >
+                  <Image
+                    src={assets.product.languageChipBg}
+                    alt=""
+                    aria-hidden="true"
+                    width={340}
+                    height={196}
+                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 180px"
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
               ))}
             </div>
           </div>

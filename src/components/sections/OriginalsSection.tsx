@@ -1,34 +1,66 @@
 import Image from 'next/image';
-import { assets } from '@/data/assets';
-import { siteContent } from '@/data/site-content';
 
 export function OriginalsSection() {
   return (
-    <section id="originals" className="relative overflow-hidden bg-cheeko-orange px-4 py-12 sm:px-8 sm:py-16 lg:px-10">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,255,255,0.3),transparent_28%),radial-gradient(circle_at_88%_78%,rgba(255,196,0,0.42),transparent_34%)]" />
-      <div className="relative mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-[2rem] border-4 border-cheeko-ink bg-cheeko-yellow shadow-[0_12px_0_#24160f] sm:rounded-[2.5rem]">
-          <Image
-            src={assets.originals.section}
-            alt="Cheeko Originals podcast and content artwork"
-            width={1452}
-            height={484}
-            sizes="(max-width: 768px) 100vw, 1180px"
-            className="aspect-[1.08/1] w-full object-cover sm:aspect-[3/1]"
-          />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-cheeko-ink/78 via-cheeko-ink/28 to-transparent p-5 pt-20 text-white sm:p-8 lg:inset-y-0 lg:right-0 lg:left-auto lg:flex lg:w-[44%] lg:flex-col lg:justify-center lg:bg-cheeko-ink/82 lg:p-10">
-            <p className="font-display text-xs font-black uppercase tracking-[0.2em] text-cheeko-yellow">
-              {siteContent.originals.eyebrow}
-            </p>
-            <h2 className="mt-2 font-display text-4xl font-black leading-[0.86] tracking-[-0.05em] sm:text-5xl lg:text-6xl">
-              {siteContent.originals.title}
-            </h2>
-            <p className="mt-4 max-w-lg text-sm font-black leading-6 text-white/90 sm:text-base sm:leading-7">
-              {siteContent.originals.description}
-            </p>
-            <span className="mt-5 inline-flex w-fit rounded-full border-2 border-white bg-cheeko-pink px-4 py-2 font-display text-xs font-black uppercase tracking-[0.14em] text-cheeko-ink shadow-[0_5px_0_rgba(255,255,255,0.22)]">
-              {siteContent.originals.badge}
-            </span>
+    <section
+      id="originals"
+      className="relative overflow-hidden bg-[linear-gradient(90deg,#ffc31b_0%,#ffb048_36%,#ff8c63_63%,#ff7d8c_100%)] px-0 py-0"
+    >
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute right-[6%] top-[8%] hidden text-[3.4rem] font-serif font-semibold tracking-wide text-white/22 sm:block sm:text-[6.2rem] lg:right-[4%] lg:top-[2%] lg:text-[15rem]">
+          POD
+        </div>
+        <div className="absolute right-[4%] top-[44%] hidden text-[3.4rem] font-serif font-semibold tracking-wide text-white/22 sm:block sm:text-[6.2rem] lg:right-[2%] lg:top-[37%] lg:text-[15rem]">
+          CAST
+        </div>
+      </div>
+
+      <div className="relative mx-auto w-full max-w-[2048px]">
+        <div className="grid min-h-[360px] grid-cols-1 sm:grid-cols-2 lg:min-h-[484px] lg:grid-cols-[0.42fr_0.25fr_0.33fr]">
+          <div className="relative min-h-[200px] overflow-hidden sm:min-h-[260px] lg:min-h-0">
+            <Image
+              src="/assets/originals/podcast-artwork.png"
+              alt="Cheeko Originals illustrated artwork"
+              width={896}
+              height={764}
+              className="h-full w-full object-cover object-left"
+            />
+          </div>
+
+          <div className="relative flex min-h-[220px] items-end justify-center overflow-hidden px-2 pt-4 sm:min-h-[260px] sm:px-4 sm:pt-6 lg:min-h-0 lg:px-0 lg:pt-0">
+            <Image
+              src="/assets/originals/device-cutout.png"
+              alt="Cheeko device"
+              width={612}
+              height={960}
+              className="h-auto w-[170px] sm:w-[220px] lg:w-[330px] lg:-translate-x-20"
+            />
+          </div>
+
+          <div className="relative col-span-1 flex flex-col justify-between px-4 pb-4 pt-4 sm:col-span-2 sm:px-6 lg:col-span-1 lg:px-8 lg:pb-6 lg:pt-6 lg:translate-x-8">
+            <div className="flex items-center justify-center gap-2 sm:justify-end lg:gap-3 lg:pr-4 lg:-mt-9">
+              <Image
+                src="/assets/originals/cheeko-originals-logo.png"
+                alt="Cheeko logo"
+                width={282}
+                height={78}
+                className="h-auto w-[120px] sm:w-[150px] lg:w-[190px]"
+              />
+              <span className="text-[20px] font-medium leading-none text-black sm:text-[28px] lg:text-[52px]">Originals</span>
+            </div>
+
+            <div className="mt-15 flex items-center justify-center gap-3 sm:mt-120 sm:justify-end lg:pr-4">
+              <span className="rounded-[0.9rem] bg-[#ff6700] px-4 py-2 text-sm font-medium text-black lg:rounded-[1.1rem] lg:px-6 lg:py-3 lg:text-[1.9rem]">
+                Coming soon
+              </span>
+              <Image
+                src="/assets/originals/instagram-icon.png"
+                alt="Instagram icon"
+                width={66}
+                height={66}
+                className="h-8 w-8 lg:h-12 lg:w-12"
+              />
+            </div>
           </div>
         </div>
       </div>

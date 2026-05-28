@@ -1,5 +1,6 @@
 import { AgeStages } from '@/components/sections/AgeStages';
 import { Capabilities } from '@/components/sections/Capabilities';
+import { CardSystemSection } from '@/components/sections/CardSystemSection';
 import { Footer } from '@/components/sections/Footer';
 import { Header } from '@/components/sections/Header';
 import { HeroSection } from '@/components/sections/HeroSection';
@@ -23,6 +24,7 @@ export default function Home() {
       <Capabilities />
       <LanguageSection />
       <ParentTrust />
+      <CardSystemSection />
       <AgeStages />
       <ReviewsSection />
       <OriginalsSection />

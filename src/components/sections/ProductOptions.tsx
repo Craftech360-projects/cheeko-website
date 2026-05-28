@@ -5,56 +5,69 @@ import { Button } from '@/components/ui/Button';
 
 const productImages = {
   pro: assets.product.pro,
-  basic: assets.product.basic
+  basic: assets.product.basic,
+  proCard: assets.product.proCard,
+  basicCard: assets.product.basicCard
 } as const;
 
 export function ProductOptions() {
   return (
-    <section id="cards" className="relative overflow-hidden bg-[linear-gradient(180deg,#ffc400_0%,#ffe28a_48%,#fff7e8_100%)] px-4 pb-18 pt-10 sm:px-8 sm:pb-24 lg:px-10">
-      <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:gap-10">
-        {siteContent.products.map((product) => {
-          const isSoldOut = product.status === 'Sold out';
+    <section
+      id="cards"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#ffc400_0%,#ffd33a_48%,#fff0aa_100%)] px-5 pb-9 pt-10 sm:px-8 sm:pb-12 sm:pt-11 lg:px-10"
+    >
+      <div className="mx-auto max-w-[1240px]">
+        <div className="text-center">
+          <h2 className="font-display text-[2.55rem] font-black leading-none text-black sm:text-[2.75rem]">
+            Choose your Cheeko
+          </h2>
+          <p className="mt-5 text-lg font-medium leading-none text-black/55 sm:text-[1.35rem]">
+            Two magical ways to spark curiosity and joy.
+          </p>
+        </div>
 
-          return (
-            <article
-              key={product.name}
-              className={isSoldOut ? 'group relative rounded-[2rem] border-4 border-white/70 bg-cheeko-card/80 p-4 text-center shadow-cheeko-card transition duration-300 sm:p-6' : 'group relative rounded-[2rem] border-4 border-white/80 bg-cheeko-card/95 p-4 text-center shadow-cheeko-card transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(70,41,12,0.22)] sm:p-6'}
-            >
-              {isSoldOut ? (
-                <span className="absolute right-5 top-5 z-10 rounded-full bg-stone-700 px-4 py-2 font-display text-xs font-black uppercase tracking-[0.16em] text-white shadow-cheeko-card">
-                  Sold out
-                </span>
-              ) : null}
-              <div className={isSoldOut ? 'mx-auto flex h-80 items-end justify-center overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_50%_30%,#fff7d1,transparent_52%),linear-gradient(180deg,#fffef6,#ffd85f)] p-2 opacity-70 grayscale sm:h-96' : 'mx-auto flex h-80 items-end justify-center overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_50%_30%,#fff7d1,transparent_52%),linear-gradient(180deg,#fffef6,#ffd85f)] p-2 sm:h-96'}>
+        <div className="mx-auto mt-10 grid max-w-[1180px] gap-12 sm:grid-cols-2 sm:justify-between sm:gap-20 lg:gap-48">
+          {siteContent.products.map((product, index) => (
+            <article key={product.name} className="flex flex-col items-center text-center sm:text-left">
+              <div className="relative aspect-[0.925] w-full max-w-[470px]">
                 <Image
                   src={productImages[product.imageKey]}
-                  alt={`${product.name} yellow Cheeko device`}
-                  width={760}
-                  height={760}
-                  sizes="(max-width: 768px) 92vw, 520px"
-                  className="h-full w-auto scale-110 object-contain drop-shadow-[0_22px_22px_rgba(88,53,0,0.24)] transition duration-300 group-hover:scale-[1.16]"
+                  alt={`${product.name} product photo`}
+                  width={900}
+                  height={970}
+                  sizes="(max-width: 640px) 88vw, 470px"
+                  className={`h-full w-full object-contain drop-shadow-[0_18px_11px_rgba(88,65,0,0.23)] ${
+                    index === 0 ? '-rotate-[5deg]' : 'rotate-[4deg]'
+                  }`}
                 />
               </div>
-              <p className="mx-auto mt-5 inline-flex rounded-full bg-cheeko-yellow px-4 py-1.5 font-display text-xs font-black uppercase tracking-[0.12em] text-cheeko-brown">
-                {product.badge}
-              </p>
-              <h3 className="mt-3 font-display text-3xl font-black tracking-[-0.03em] text-cheeko-ink sm:text-4xl">{product.name}</h3>
-              <p className="mt-1 font-display text-2xl font-black text-cheeko-brown">{product.price}</p>
-              <p className="mx-auto mt-3 max-w-sm text-sm font-bold leading-6 text-cheeko-brown/85 sm:text-base">
-                {product.description}
-              </p>
-              <Button
-                type="button"
-                variant={isSoldOut ? 'disabled' : 'primary'}
-                className="mt-5 w-full max-w-xs uppercase tracking-[0.12em]"
-                aria-label={isSoldOut ? `${product.name} sold out` : product.cta}
-                disabled={isSoldOut}
-              >
-                {isSoldOut ? 'Sold out' : product.cta}
-              </Button>
+
+              <div className={`mt-5 flex min-h-[224px] w-full max-w-[330px] flex-col ${index === 0 ? 'sm:translate-x-14 lg:translate-x-24' : ''}`}>
+                <h3 className="font-display text-[2rem] font-black leading-none text-black sm:text-[2.1rem]">
+                  {product.name}
+                </h3>
+                <p className="mt-2 font-display text-[1.85rem] font-medium leading-none text-black">{product.price}</p>
+                <p className="mt-2 max-w-[310px] text-[1.3rem] font-medium leading-[1.08] text-black/55">
+                  {product.description}
+                </p>
+                <Button
+                  type="button"
+                  variant="primary"
+                  className="mx-auto mt-auto min-h-0 h-12 w-[224px] rounded-xl px-8 py-0 font-sans text-[1.15rem] font-medium normal-case tracking-normal text-white shadow-none sm:mx-0"
+                  aria-label={`${product.cta} ${product.name}`}
+                  style={{
+                    background: '#f95761',
+                    border: '0',
+                    boxShadow: '0 7px 12px rgba(173, 80, 20, 0.16)',
+                    color: '#ffffff'
+                  }}
+                >
+                  {product.cta}
+                </Button>
+              </div>
             </article>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

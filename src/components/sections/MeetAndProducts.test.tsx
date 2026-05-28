@@ -17,10 +17,10 @@ describe('Meet Cheeko and products', () => {
 
     expect(screen.getByRole('heading', { level: 3, name: /^Cheeko Pro$/i })).toBeInTheDocument();
     expect(screen.getByText(/₹ 4,990/i)).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Buy Cheeko Pro/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Pre Order Cheeko Pro/i })).toBeInTheDocument();
 
     expect(screen.getByRole('heading', { level: 3, name: /Cheeko Basic/i })).toBeInTheDocument();
     expect(screen.getByText(/₹ 3,990/i)).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Cheeko Basic sold out/i })).toBeDisabled();
+    expect(screen.getByRole('button', { name: /Buy Cheeko Basic/i })).not.toBeDisabled();
   });
 });

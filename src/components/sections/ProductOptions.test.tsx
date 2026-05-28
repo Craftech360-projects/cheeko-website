@@ -3,18 +3,16 @@ import { describe, expect, it } from 'vitest';
 import { ProductOptions } from './ProductOptions';
 
 describe('ProductOptions visual states', () => {
-  it('marks Cheeko Basic as sold out and disables its buying action', () => {
+  it('presents the product choice heading and both purchase actions', () => {
     render(<ProductOptions />);
 
-    expect(screen.getAllByText(/Sold out/i).length).toBeGreaterThan(0);
-    const basicButton = screen.getByRole('button', { name: /Cheeko Basic sold out/i });
-    expect(basicButton).toBeDisabled();
-  });
+    expect(screen.getByRole('heading', { name: /Choose your Cheeko/i })).toBeInTheDocument();
+    expect(screen.getByText(/Two magical ways to spark curiosity and joy/i)).toBeInTheDocument();
 
-  it('keeps Cheeko Pro as the primary available buying action', () => {
-    render(<ProductOptions />);
-
-    const proButton = screen.getByRole('button', { name: /Buy Cheeko Pro/i });
+    const proButton = screen.getByRole('button', { name: /Pre Order Cheeko Pro/i });
+    const basicButton = screen.getByRole('button', { name: /Buy Cheeko Basic/i });
     expect(proButton).not.toBeDisabled();
+    expect(basicButton).not.toBeDisabled();
+    expect(screen.queryByText(/Sold out/i)).not.toBeInTheDocument();
   });
 });
