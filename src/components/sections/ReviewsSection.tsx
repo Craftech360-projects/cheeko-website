@@ -6,7 +6,10 @@ export function ReviewsSection() {
   const tapeColors = ['#bf9ce7', '#eba1cb', '#efd172', '#cfe1a2'];
 
   return (
-    <section id="reviews" className="overflow-hidden bg-[#FFD6E5] px-4 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
+    <section
+      id="reviews"
+      className="overflow-hidden bg-[linear-gradient(180deg,_#FFA9C7_0%,_#FFD6E5_100%)] px-4 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20"
+    >
       <div className="mx-auto max-w-[1680px]">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="font-display text-4xl font-black tracking-[-0.02em] text-black sm:text-5xl lg:text-[74px]">

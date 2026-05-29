@@ -36,6 +36,7 @@ export function MeetCheeko() {
               src={assets.hero.meetCheeko}
               alt="Child laughing with Cheeko device"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               priority
               className="object-cover"
             />
@@ -45,6 +46,5 @@ export function MeetCheeko() {
     </section>
   );
 }
-
 
 

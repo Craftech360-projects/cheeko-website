@@ -1,18 +1,14 @@
 import Image from 'next/image';
-import { assets } from '@/data/assets';
-import { siteContent } from '@/data/site-content';
 
 export function ParentTrust() {
-  const playCard = siteContent.trust.cards[2];
-
   return (
-    <section className="bg-[#f5bfd0] px-4 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+    <section className="bg-[linear-gradient(180deg,_#FFDDE2_0%,_#FFB4CE_100%)] px-4 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
       <div className="mx-auto max-w-[1620px]">
         <div>
           <div className="grid gap-3 lg:min-h-[56rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
             <div className="grid gap-3 lg:grid-rows-[62fr_38fr] lg:gap-4">
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr] lg:gap-4">
-                <article className="relative flex h-full min-h-[22rem] overflow-hidden rounded-[1.3rem] border border-black/12 bg-[#f3dde4] p-5 sm:min-h-[24rem] sm:p-6 lg:min-h-[30rem] lg:p-8">
+                <article className="relative flex h-full min-h-[22rem] overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-5 sm:min-h-[24rem] sm:p-6 lg:min-h-[30rem] lg:p-8">
                   <div className="relative z-10 max-w-[58%]">
                     <h3 className="font-display text-[2rem] font-black leading-[1.05] text-black sm:text-[2.25rem] lg:text-[3.3rem]">
                       Your child&apos;s
@@ -48,7 +44,7 @@ export function ParentTrust() {
                   />
                 </article>
 
-                <article className="relative flex h-full min-h-[22rem] flex-col overflow-hidden rounded-[1.3rem] bg-[#CDBAAB]">
+                <article className="relative flex h-full min-h-[22rem] flex-col overflow-hidden rounded-[2.5rem] bg-[#CDBAAB]">
                   <h3 className="absolute inset-x-0 top-5 z-10 px-3 text-center font-display text-[1.65rem] font-black leading-tight text-black sm:text-[1.9rem] lg:top-6 lg:text-[2.2rem]">
                     Make it truly theirs
                   </h3>
@@ -64,7 +60,7 @@ export function ParentTrust() {
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2 lg:gap-4">
-                <article className="flex h-full overflow-hidden rounded-[1.3rem] border border-black/12 bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
+                <article className="flex h-full overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
                   <div className="flex w-full items-end gap-4 lg:gap-5">
                     <div className="min-w-0 max-w-[46%]">
                       <h3 className="font-display text-[1.65rem] font-black leading-[1.08] text-black sm:text-[1.9rem] lg:text-[2.4rem]">
@@ -100,7 +96,7 @@ export function ParentTrust() {
                   </div>
                 </article>
 
-                <article className="flex h-full overflow-hidden rounded-[1.3rem] border border-black/12 bg-[#F8AFA6] p-4 sm:p-5 lg:p-6">
+                <article className="flex h-full overflow-hidden rounded-[2.5rem] bg-[#F8AFA6] p-4 sm:p-5 lg:p-6">
                   <div className="flex w-full items-end gap-4 lg:gap-5">
                     <div className="min-w-0 max-w-[46%]">
                       <h3 className="font-display text-[1.65rem] font-black leading-[1.08] text-black sm:text-[1.9rem] lg:text-[2.4rem]">
@@ -139,7 +135,7 @@ export function ParentTrust() {
             </div>
 
             <div className="grid gap-3 lg:grid-rows-[4fr_1fr] lg:gap-4">
-              <article className="flex h-full flex-col overflow-hidden rounded-[1.3rem] border border-black/12 bg-[#f3dde4] p-4 sm:p-5 lg:p-6">
+              <article className="flex h-full flex-col overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
                 <h3 className="font-display text-[2rem] font-black leading-[1.07] text-black sm:text-[2.2rem] lg:text-[2.5rem]">
                   Your child&apos;s new best
                   <br />
@@ -165,7 +161,7 @@ export function ParentTrust() {
                 </div>
               </article>
 
-              <article className="flex h-full flex-col justify-center rounded-[1.3rem] border border-black/12 bg-[#FADCD9] p-5 sm:p-6 lg:p-7">
+              <article className="flex h-full flex-col justify-center rounded-[2.5rem] bg-[#FADCD9] p-5 sm:p-6 lg:p-7">
                 <div className="flex items-center gap-4 lg:gap-5">
                   <Image
                     src="/assets/parent-trust/offline-icon.png"

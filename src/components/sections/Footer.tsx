@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#02044d] px-6 pb-6 pt-12 text-[#8f9bb7] sm:px-10 lg:px-16 lg:pt-16" role="contentinfo">
+    <footer className="relative overflow-hidden bg-[#020127] px-6 pb-6 pt-12 text-[#8f9bb7] sm:px-10 lg:px-16 lg:pt-16" role="contentinfo">
       <div className="mx-auto max-w-[1560px]">
         <div className="grid gap-10 lg:grid-cols-[1.45fr_1fr_1fr_1fr_1fr]">
           <div>
             <Image src="/assets/footer/cheeko-logo-yellow.png" alt="Cheeko" width={280} height={100} className="h-auto w-[170px] lg:w-[210px] -ml-2 lg:-ml-4" />
-            <p className="mt-6 max-w-[440px] text-2xl leading-[1.45] text-[#8b95b0] lg:text-[24px]">
+            <p className="mt-6 max-w-[440px] text-2xl leading-[1.45] text-[#8b95b0] lg:text-[19px]">
               Your child&apos;s magical AI learning companion.
               <br />
               Screen-free fun that helps kids learn, grow,
@@ -54,8 +54,8 @@ export function Footer() {
           </div>
 
           <div className="hidden lg:block">
-            <h3 className="text-[28px] font-semibold text-[#f1b865]">Product</h3>
-            <ul className="mt-5 space-y-3 text-[24px] leading-[1.2] text-[#8b95b0]">
+            <h3 className="text-[23px] font-semibold text-[#f1b865]">Product</h3>
+            <ul className="mt-5 space-y-3 text-[19px] leading-[1.2] text-[#8b95b0]">
               <li>Features</li>
               <li>How It Works</li>
               <li>Pricing</li>
@@ -64,16 +64,16 @@ export function Footer() {
           </div>
 
           <div className="hidden lg:block">
-            <h3 className="text-[28px] font-semibold text-[#f1b865]">Company</h3>
-            <ul className="mt-5 space-y-3 text-[24px] leading-[1.2] text-[#8b95b0]">
+            <h3 className="text-[23px] font-semibold text-[#f1b865]">Company</h3>
+            <ul className="mt-5 space-y-3 text-[19px] leading-[1.2] text-[#8b95b0]">
               <li>Contact</li>
               <li>Careers</li>
             </ul>
           </div>
 
           <div className="hidden lg:block">
-            <h3 className="text-[28px] font-semibold text-[#f1b865]">Support</h3>
-            <ul className="mt-5 space-y-3 text-[24px] leading-[1.2] text-[#8b95b0]">
+            <h3 className="text-[23px] font-semibold text-[#f1b865]">Support</h3>
+            <ul className="mt-5 space-y-3 text-[19px] leading-[1.2] text-[#8b95b0]">
               <li>FAQ</li>
               <li>Shipping</li>
               <li>Returns</li>
@@ -82,8 +82,8 @@ export function Footer() {
           </div>
 
           <div className="hidden lg:block">
-            <h3 className="text-[28px] font-semibold text-[#f1b865]">Contact</h3>
-            <ul className="mt-5 space-y-3 text-[24px] leading-[1.2] text-[#8b95b0]">
+            <h3 className="text-[23px] font-semibold text-[#f1b865]">Contact</h3>
+            <ul className="mt-5 space-y-3 text-[19px] leading-[1.2] text-[#8b95b0]">
               <li>✉ info@altio.me</li>
               <li>⌖ Bangalore, India</li>
             </ul>
@@ -133,13 +133,14 @@ export function Footer() {
           <Image
             src="/assets/footer/footer-team-yellow.png"
             alt="Founders illustration"
-            width={980}
-            height={520}
-            className="mx-auto h-auto w-full max-w-[640px] lg:max-w-[980px]"
+            width={880}
+            height={420}
+            className="mx-auto h-auto w-full max-w-[540px] lg:max-w-[880px]"
+            style={{ height: 'auto' }}
           />
         </div>
 
-        <div className="mt-4 flex flex-col gap-3 border-t border-[#1d285f] pt-4 text-[24px] text-[#8b95b0] sm:flex-row sm:items-center sm:justify-between lg:mt-0 lg:border-0 lg:pt-0 lg:text-[24px]">
+        <div className="mt-4 flex flex-col gap-3 border-t border-[#1d285f] pt-4 text-[19px] text-[#8b95b0] sm:flex-row sm:items-center sm:justify-between lg:mt-0 lg:border-0 lg:pt-0 lg:text-[19px]">
           <p>© 2026 Altio AI Pvt Ltd. All rights reserved.</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2 lg:gap-x-8">
             <a href="#" className="hover:text-white">

@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export function CardSystemSection() {
   return (
-    <section className="bg-[#f5bfd0] px-4 pb-10 pt-4 sm:px-8 sm:pb-12 lg:px-10 lg:pb-14">
-      <div className="mx-auto w-full max-w-[1620px] px-5 pb-7 pt-10 sm:px-8 lg:px-10 lg:pb-10 lg:pt-12">
+    <section className="bg-[linear-gradient(180deg,_#FFB5CE_0%,_#FFD6E5_100%)] px-4 pb-2 pt-4 sm:px-8 sm:pb-3 lg:px-10 lg:pb-4">
+      <div className="mx-auto w-full max-w-[1620px] px-5 pb-2 pt-10 sm:px-8 lg:px-10 lg:pb-3 lg:pt-12">
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-display text-[2.1rem] font-black leading-[1.02] text-black sm:text-[2.6rem] lg:text-[4.2rem]">
             The Cheeko Card System

@@ -30,12 +30,11 @@ export function AgeStages() {
   return (
     <section
       aria-label="Childhood stage companion gallery"
-      className="relative overflow-hidden bg-[#f8a4c6] px-4 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,_#FFD6E5_0%,_#FFA9C7_100%)] px-4 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-8 lg:px-10 lg:pb-24 lg:pt-10"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(255,255,255,0.42)_0%,rgba(255,255,255,0.16)_42%,rgba(249,92,155,0.16)_100%)]" />
       <svg
         aria-hidden="true"
-        className="absolute inset-x-[-18%] top-7 h-[34rem] w-[136%] text-cheeko-brown/22 sm:top-2 lg:top-0"
+        className="absolute inset-x-[-18%] top-0 h-[34rem] w-[136%] text-cheeko-brown/22"
         data-testid="age-stage-waves"
         fill="none"
         viewBox="0 0 1440 520"
