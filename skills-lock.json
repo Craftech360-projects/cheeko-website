@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "skills": {
+    "Tailwind-CSS": {
+      "source": "synqing/PRISM.unified",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/Tailwind-CSS/SKILL.md",
+      "computedHash": "a380a103f8aac9cc5d842dc443483dee0c66bfce42b4e5f5def8e5529cd63e19"
+    },
+    "smithery-ai-cli": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "dc17f090c975afe1d96a25dbe843fc9c978e96d5699eed1bb7c12b411e10b830"
+    }
+  }
+}

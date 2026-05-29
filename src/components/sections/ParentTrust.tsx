@@ -1,110 +1,196 @@
 import Image from 'next/image';
+import { assets } from '@/data/assets';
+import { siteContent } from '@/data/site-content';
 
 export function ParentTrust() {
+  const playCard = siteContent.trust.cards[2];
+
   return (
-    <section className="bg-[#f5bfd0] px-4 py-6 sm:px-8 lg:px-10 lg:py-8">
-      <div className="sr-only">
-        <h2>Your child&apos;s new best companion</h2>
-        <h3>Parent Control</h3>
-        <h3>Play Anytime, Anywhere</h3>
-        <Image src="/assets/app/child-best-companion-card.png" alt="Cheeko companion app preview" width={200} height={120} />
-        <Image src="/assets/app/parent-control-card.png" alt="parent control card" width={200} height={120} />
-        <Image src="/assets/app/safe-parent-approved-card.png" alt="safe parent approved card" width={200} height={120} />
-        <Image src="/assets/app/play-anytime-card.png" alt="play anytime card" width={200} height={120} />
-      </div>
-      <div className="mx-auto w-full max-w-[1600px]">
-        <div className="grid items-start gap-2 lg:grid-cols-[1.15fr_0.85fr_1fr]">
-          <article className="relative overflow-hidden rounded-[2rem] bg-[#efcfd0] p-7 lg:h-[430px] lg:px-9 lg:pb-5 lg:pt-8">
-            <div className="relative z-10 max-w-[220px] sm:max-w-[260px] lg:max-w-[248px]">
-              <h3 className="text-[3rem] font-black leading-[1.02] tracking-[-0.01em] text-black lg:text-[2.95rem]">
-                Your child&apos;s new best Companion
-              </h3>
-              <p className="mt-3 text-[0.92rem] leading-[1.1] text-black/55 lg:max-w-[228px] lg:text-[0.72rem] lg:leading-[1.18]">
-                Talks, listens, plays and grows with your child - every single day.
-              </p>
-              <Image
-                src="/assets/parent-trust/store-badges.png"
-                alt="Available on the App Store and Google Play"
-                width={344}
-                height={224}
-                className="mt-4 h-auto w-[190px] sm:w-[205px] lg:mt-4 lg:w-[165px]"
-              />
+    <section className="bg-[#f5bfd0] px-4 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+      <div className="mx-auto max-w-[1620px]">
+        <div>
+          <div className="grid gap-3 lg:min-h-[56rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
+            <div className="grid gap-3 lg:grid-rows-[62fr_38fr] lg:gap-4">
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr] lg:gap-4">
+                <article className="relative flex h-full min-h-[22rem] overflow-hidden rounded-[1.3rem] border border-black/12 bg-[#f3dde4] p-5 sm:min-h-[24rem] sm:p-6 lg:min-h-[30rem] lg:p-8">
+                  <div className="relative z-10 max-w-[58%]">
+                    <h3 className="font-display text-[2rem] font-black leading-[1.05] text-black sm:text-[2.25rem] lg:text-[3.3rem]">
+                      Your child&apos;s
+                      <br />
+                      new best
+                      <br />
+                      Companion
+                    </h3>
+                    <p className="mt-4 text-[0.95rem] font-medium leading-[1.3] text-black/55 sm:text-[1.05rem] lg:text-[1.55rem]">
+                      Talks, listens, plays and
+                      <br />
+                      grows with your child -
+                      <br />
+                      every single day.
+                    </p>
+                    <Image
+                      src="/assets/parent-trust/store-badges.png"
+                      alt="App Store and Google Play badges"
+                      width={420}
+                      height={214}
+                      sizes="(max-width: 640px) 46vw, 230px"
+                      className="mt-5 h-auto w-[9.7rem] sm:w-[11rem] lg:mt-7 lg:w-[15rem]"
+                    />
+                  </div>
+
+                  <Image
+                    src="/assets/parent-trust/cheeko-fox-new.png"
+                    alt="Cheeko companion app preview"
+                    width={1100}
+                    height={1260}
+                    sizes="(max-width: 640px) 44vw, (max-width: 1024px) 36vw, 360px"
+                    className="absolute bottom-0 right-0 h-[82%] w-auto max-w-[49%] object-contain sm:h-[84%] lg:h-[88%]"
+                  />
+                </article>
+
+                <article className="relative flex h-full min-h-[22rem] flex-col overflow-hidden rounded-[1.3rem] bg-[#CDBAAB]">
+                  <h3 className="absolute inset-x-0 top-5 z-10 px-3 text-center font-display text-[1.65rem] font-black leading-tight text-black sm:text-[1.9rem] lg:top-6 lg:text-[2.2rem]">
+                    Make it truly theirs
+                  </h3>
+                  <Image
+                    src="/assets/parent-trust/image 37.png"
+                    alt="parent control card"
+                    width={900}
+                    height={1030}
+                    sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 360px"
+                    className="absolute inset-x-0 bottom-0 mx-auto h-[82%] w-[90%] object-contain object-bottom sm:h-[84%] sm:w-[89%] lg:h-[86%] lg:w-[87%]"
+                  />
+                </article>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2 lg:gap-4">
+                <article className="flex h-full overflow-hidden rounded-[1.3rem] border border-black/12 bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
+                  <div className="flex w-full items-end gap-4 lg:gap-5">
+                    <div className="min-w-0 max-w-[46%]">
+                      <h3 className="font-display text-[1.65rem] font-black leading-[1.08] text-black sm:text-[1.9rem] lg:text-[2.4rem]">
+                        Your child&apos;s
+                        <br />
+                        new best
+                        <br />
+                        Companion
+                      </h3>
+                      <p className="mt-4 text-[0.95rem] font-medium leading-[1.2] text-black/60 sm:text-[1.05rem] lg:text-[1.55rem]">
+                        Talks, listens,
+                        <br />
+                        plays and
+                        <br />
+                        grows with
+                        <br />
+                        your child -
+                        <br />
+                        every single
+                        <br />
+                        day.
+                      </p>
+                    </div>
+
+                    <Image
+                      src="/assets/parent-trust/hello-screen.png"
+                      alt="Hello from Cheeko screen preview"
+                      width={760}
+                      height={1200}
+                      sizes="(max-width: 640px) 44vw, (max-width: 1024px) 30vw, 320px"
+                      className="h-auto w-[54%] object-contain"
+                    />
+                  </div>
+                </article>
+
+                <article className="flex h-full overflow-hidden rounded-[1.3rem] border border-black/12 bg-[#F8AFA6] p-4 sm:p-5 lg:p-6">
+                  <div className="flex w-full items-end gap-4 lg:gap-5">
+                    <div className="min-w-0 max-w-[46%]">
+                      <h3 className="font-display text-[1.65rem] font-black leading-[1.08] text-black sm:text-[1.9rem] lg:text-[2.4rem]">
+                        Secure.
+                        <br />
+                        Safe &amp;
+                        <br />
+                        Parent
+                        <br />
+                        Approved
+                      </h3>
+                      <p className="mt-4 text-[0.95rem] font-medium leading-[1.2] text-black/60 sm:text-[1.05rem] lg:text-[1.55rem]">
+                        Verification
+                        <br />
+                        keeps
+                        <br />
+                        Cheeko a
+                        <br />
+                        safe space
+                        <br />
+                        for your child.
+                      </p>
+                    </div>
+
+                    <Image
+                      src="/assets/parent-trust/verification-screen.png"
+                      alt="Secure verification screen preview"
+                      width={760}
+                      height={1200}
+                      sizes="(max-width: 640px) 44vw, (max-width: 1024px) 30vw, 320px"
+                      className="h-auto w-[54%] object-contain"
+                    />
+                  </div>
+                </article>
+              </div>
             </div>
-            <Image
-              src="/assets/parent-trust/cheeko-fox-new.png"
-              alt="Cheeko fox"
-              width={612}
-              height={960}
-              className="pointer-events-none absolute bottom-0 right-4 h-auto w-[175px] sm:w-[195px] lg:right-5 lg:w-[206px]"
-            />
-          </article>
 
-          <article className="self-start rounded-[2rem] bg-[#c8b8a9] p-4 lg:h-[430px] lg:px-0 lg:pt-5 lg:pb-0">
-            <h3 className="text-center text-[0.95rem] font-black leading-none text-black lg:text-[0.8rem]">Make it truly theirs</h3>
-            <Image
-              src="/assets/parent-trust/customize-screen.png"
-              alt="Customize your toy screen"
-              width={460}
-              height={812}
-              className="mx-auto mt-2 h-auto w-full max-w-[230px] lg:mt-3 lg:max-w-[218px]"
-            />
-          </article>
+            <div className="grid gap-3 lg:grid-rows-[4fr_1fr] lg:gap-4">
+              <article className="flex h-full flex-col overflow-hidden rounded-[1.3rem] border border-black/12 bg-[#f3dde4] p-4 sm:p-5 lg:p-6">
+                <h3 className="font-display text-[2rem] font-black leading-[1.07] text-black sm:text-[2.2rem] lg:text-[2.5rem]">
+                  Your child&apos;s new best
+                  <br />
+                  Companion
+                </h3>
+                <p className="mt-4 max-w-[19ch] text-[0.95rem] font-medium leading-[1.2] text-black/60 sm:text-[1.05rem] lg:text-[1.8rem]">
+                  Kids can pick up their
+                  <br />
+                  own adventure and
+                  <br />
+                  explore their interests
+                </p>
 
-          <article className="overflow-hidden rounded-[2rem] bg-[#efcfd0] p-6 lg:h-[560px] lg:-mt-8 lg:p-9">
-            <h3 className="max-w-[290px] text-[2.05rem] font-black leading-[1.02] tracking-[-0.01em] text-black">
-              Your child&apos;s new best Companion
-            </h3>
-            <p className="mt-3 max-w-[300px] text-[0.72rem] leading-[1.18] text-black/55">
-              Kids can pick up their own adventure and explore their interests
-            </p>
-            <Image
-              src="/assets/parent-trust/good-afternoon-card.png"
-              alt="Good afternoon adventure card"
-              width={540}
-              height={986}
-              className="mt-5 h-auto w-full rounded-[1.9rem] object-contain"
-            />
-          </article>
-        </div>
+                <div className="mt-5 flex flex-1 items-end justify-end lg:mt-7">
+                  <Image
+                    src="/assets/parent-trust/good-afternoon-card.png"
+                    alt="Cheeko companion app preview"
+                    width={960}
+                    height={1370}
+                    sizes="(max-width: 640px) 86vw, (max-width: 1024px) 45vw, 430px"
+                    className="h-auto w-full max-w-[16rem] object-contain sm:max-w-[18.5rem] lg:max-w-[15rem]"
+                  />
+                </div>
+              </article>
 
-        <div className="mt-1 grid gap-2 lg:-mt-40 lg:grid-cols-[1.15fr_0.85fr_1fr]">
-          <article className="relative overflow-hidden rounded-[2rem] bg-[#efcfd0] p-6 lg:aspect-square lg:p-5">
-            <h3 className="max-w-[260px] text-[1.08rem] font-black leading-[1.05] tracking-[-0.01em] text-black lg:max-w-[170px] lg:text-[0.95rem]">Your child&apos;s new best Companion</h3>
-            <p className="mt-3 max-w-[200px] text-[0.88rem] leading-[1.1] text-black/55 lg:max-w-[140px] lg:text-[0.72rem] lg:leading-[1.2]">
-              Talks, listens, plays and grows with your child - every single day.
-            </p>
-            <Image
-              src="/assets/parent-trust/hello-screen.png"
-              alt="Hello from Cheeko app"
-              width={114}
-              height={157}
-              className="absolute bottom-0 right-8 h-auto w-[136px] lg:right-4 lg:w-[124px]"
-            />
-          </article>
-
-          <article className="relative overflow-hidden rounded-[2rem] bg-[#e8a6a0] p-4 lg:aspect-square lg:p-5">
-            <h3 className="text-[1.08rem] font-black leading-[1.06] tracking-[-0.01em] text-black lg:max-w-[160px] lg:text-[0.95rem]">Secure. Safe &amp; Parent Approved</h3>
-            <p className="mt-3 max-w-[120px] text-[0.84rem] leading-[1.08] text-black/56 lg:max-w-[110px] lg:text-[0.72rem] lg:leading-[1.2]">
-              Verification keeps Cheeko a safe space for your child.
-            </p>
-            <Image
-              src="/assets/parent-trust/verification-screen.png"
-              alt="Verification screen"
-              width={388}
-              height={608}
-              className="absolute bottom-0 right-4 h-auto w-[165px] lg:right-3 lg:w-[122px]"
-            />
-          </article>
-
-          <article className="overflow-hidden rounded-[2rem] lg:h-[122px] lg:mt-60">
-            <Image
-              src="/assets/parent-trust/socials-card.png"
-              alt="Play anytime anywhere card"
-              width={820}
-              height={316}
-              className="h-full w-full object-cover"
-            />
-          </article>
+              <article className="flex h-full flex-col justify-center rounded-[1.3rem] border border-black/12 bg-[#FADCD9] p-5 sm:p-6 lg:p-7">
+                <div className="flex items-center gap-4 lg:gap-5">
+                  <Image
+                    src="/assets/parent-trust/offline-icon.png"
+                    alt="Offline play icon"
+                    width={140}
+                    height={140}
+                    sizes="(max-width: 640px) 56px, 72px"
+                    className="h-14 w-14 object-contain sm:h-[4.2rem] sm:w-[4.2rem]"
+                  />
+                  <div className="min-w-0">
+                    <h3 className="font-display text-[2rem] font-black leading-[1.02] text-black sm:text-[2.2rem] lg:text-[2rem]">
+                      Play Anytime,
+                      <br />
+                      Anywhere
+                    </h3>
+                    <p className="mt-3 text-[0.95rem] font-medium leading-[1.25] text-black/60 sm:text-[1.05rem] lg:text-[1.75rem]">
+                      No internet? No problem!
+                      <br />
+                      Cheeko works offline too.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
