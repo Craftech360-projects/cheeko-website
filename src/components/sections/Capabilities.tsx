@@ -18,7 +18,7 @@ export function Capabilities() {
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#efe0a2_0%,#f2e4ab_54%,#f3e7bd_100%)] px-5 pb-12 pt-24 sm:px-8 sm:pb-16 sm:pt-28 lg:px-12 lg:pb-20"
+      className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,#efe0a2_0%,#f2e4ab_54%,#f3e7bd_100%)] px-5 pb-12 pt-24 sm:px-8 sm:pb-16 sm:pt-28 lg:px-12 lg:pb-20"
     >
       <div className="mx-auto max-w-[2010px]">
         <div className="mx-auto max-w-[1000px] text-center">

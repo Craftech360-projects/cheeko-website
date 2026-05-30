@@ -6,7 +6,7 @@ import { Globe, Brain, BookOpen } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section id="top" className="relative w-full h-[90dvh] overflow-hidden bg-cheeko-ink">
+    <section id="top" className="relative w-full h-[100svh] min-h-screen overflow-hidden bg-cheeko-ink">
       {/* Background Image Spread */}
       <Image
         src={assets.hero.desktop}
@@ -91,6 +91,5 @@ export function HeroSection() {
     </section>
   );
 }
-
 
 

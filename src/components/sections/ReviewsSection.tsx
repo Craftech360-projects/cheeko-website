@@ -8,7 +8,7 @@ export function ReviewsSection() {
   return (
     <section
       id="reviews"
-      className="overflow-hidden bg-[linear-gradient(180deg,_#FFA9C7_0%,_#FFD6E5_100%)] px-4 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20"
+      className="min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,_#FFA9C7_0%,_#FFD6E5_100%)] px-4 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-20"
     >
       <div className="mx-auto max-w-[1680px]">
         <div className="mx-auto max-w-5xl text-center">

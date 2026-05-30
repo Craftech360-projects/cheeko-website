@@ -30,7 +30,7 @@ export function AgeStages() {
   return (
     <section
       aria-label="Childhood stage companion gallery"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,_#FFD6E5_0%,_#FFA9C7_100%)] px-4 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-8 lg:px-10 lg:pb-24 lg:pt-10"
+      className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,_#FFD6E5_0%,_#FFA9C7_100%)] px-4 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-8 lg:px-10 lg:pb-24 lg:pt-10"
     >
       <svg
         aria-hidden="true"

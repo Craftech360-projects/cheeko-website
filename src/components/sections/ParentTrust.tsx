@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export function ParentTrust() {
   return (
-    <section className="bg-[linear-gradient(180deg,_#FFDDE2_0%,_#FFB4CE_100%)] px-4 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
-      <div className="mx-auto max-w-[1620px]">
-        <div>
-          <div className="grid gap-3 lg:min-h-[56rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
+    <section className="min-h-screen h-[100dvh] overflow-hidden bg-[linear-gradient(180deg,_#FFDDE2_0%,_#FFB4CE_100%)] px-4 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-6">
+      <div className="mx-auto h-full max-w-[1620px]">
+        <div className="h-full overflow-y-auto">
+          <div className="grid gap-3 lg:min-h-[10rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
             <div className="grid gap-3 lg:grid-rows-[62fr_38fr] lg:gap-4">
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr] lg:gap-4">
                 <article className="relative flex h-full min-h-[22rem] overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-5 sm:min-h-[24rem] sm:p-6 lg:min-h-[30rem] lg:p-8">
@@ -156,7 +156,7 @@ export function ParentTrust() {
                     width={960}
                     height={1370}
                     sizes="(max-width: 640px) 86vw, (max-width: 1024px) 45vw, 430px"
-                    className="h-auto w-full max-w-[16rem] object-contain sm:max-w-[18.5rem] lg:max-w-[15rem]"
+                    className="h-auto w-full max-w-[16rem] object-contain sm:max-w-[18.5rem] lg:max-w-[24rem]"
                   />
                 </div>
               </article>

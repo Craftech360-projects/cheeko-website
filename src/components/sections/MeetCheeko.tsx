@@ -4,7 +4,7 @@ import { assets } from '@/data/assets';
 
 export function MeetCheeko() {
   return (
-    <section id="meet" className="relative overflow-hidden bg-cheeko-yellow px-6 py-16 sm:px-12 sm:py-24 lg:px-20 lg:py-32">
+    <section id="meet" className="relative min-h-screen min-h-[100svh] overflow-hidden bg-cheeko-yellow px-6 py-16 sm:px-12 sm:py-24 lg:px-20 lg:py-32">
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-20">
         
         {/* Left Content */}
@@ -46,5 +46,4 @@ export function MeetCheeko() {
     </section>
   );
 }
-
 

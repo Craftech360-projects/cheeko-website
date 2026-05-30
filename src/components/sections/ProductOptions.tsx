@@ -14,7 +14,7 @@ export function ProductOptions() {
   return (
     <section
       id="cards"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#ffc400_0%,#ffd33a_48%,#fff0aa_100%)] px-5 pb-9 pt-10 sm:px-8 sm:pb-12 sm:pt-11 lg:px-10"
+      className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,#ffc400_0%,#ffd33a_48%,#fff0aa_100%)] px-5 pb-9 pt-10 sm:px-8 sm:pb-12 sm:pt-11 lg:px-10"
     >
       <div className="mx-auto max-w-[1240px]">
         <div className="text-center">
