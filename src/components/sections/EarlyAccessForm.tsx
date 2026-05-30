@@ -66,11 +66,13 @@ export function EarlyAccessForm() {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             placeholder={siteContent.hero.emailPlaceholder}
-            className="w-full h-12 pl-12 pr-4 bg-stone-50 border-2 border-stone-100 rounded-2xl text-cheeko-ink font-bold focus:border-cheeko-pink focus:outline-none transition-all placeholder:text-stone-400 text-sm"
+            aria-label="Email address"
+            className="h-[3.2rem] w-full rounded-[1rem] border border-[#e6e6e6] bg-white pl-11 pr-3 text-[0.98rem] font-medium text-cheeko-ink outline-none transition-all placeholder:text-[#9a9a9a] focus:border-[#f95c9b] focus:ring-2 focus:ring-[#ffd4e6] sm:h-[3.7rem] sm:rounded-[1.15rem] sm:pl-14 sm:pr-4 sm:text-[1.15rem]"
             aria-describedby={message ? 'early-access-message' : undefined}
           />
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 group-focus-within:text-cheeko-pink transition-colors">
-            <Mail size={18} className="stroke-[2.5]" />
+          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9a9a9a] transition-colors group-focus-within:text-cheeko-pink sm:left-5">
+            <Mail size={17} className="stroke-[2.2] sm:hidden" />
+            <Mail size={21} className="hidden stroke-[2.2] sm:block" />
           </div>
         </div>
  
@@ -90,10 +92,11 @@ export function EarlyAccessForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="group w-full h-14 bg-gradient-to-r from-cheeko-pink to-[#E91E63] text-white rounded-2xl text-base font-black uppercase tracking-widest shadow-[0_8px_30px_rgb(249,92,155,0.4)] hover:shadow-[0_8px_40px_rgb(249,92,155,0.6)] hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70 disabled:hover:translate-y-0 transition-all flex items-center justify-center gap-3"
+          className="group flex h-[3.2rem] w-full items-center justify-center gap-2 rounded-[1rem] bg-gradient-to-r from-[#f95c9b] to-[#f64893] text-[0.93rem] font-black uppercase tracking-[0.12em] text-white shadow-[0_9px_26px_rgba(249,92,155,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(249,92,155,0.47)] active:translate-y-0 disabled:opacity-70 disabled:hover:translate-y-0 sm:h-[3.8rem] sm:gap-3 sm:rounded-[1.15rem] sm:text-[1.07rem]"
         >
           {isLoading ? 'Joining...' : siteContent.hero.cta}
-          {!isLoading && <ArrowRight className="group-hover:translate-x-1 transition-transform" />}
+          {!isLoading && <ArrowRight size={20} className="transition-transform group-hover:translate-x-1 sm:hidden" />}
+          {!isLoading && <ArrowRight size={24} className="hidden transition-transform group-hover:translate-x-1 sm:block" />}
         </button>
  
         {message && (
@@ -111,4 +114,3 @@ export function EarlyAccessForm() {
     </div>
   );
 }
-

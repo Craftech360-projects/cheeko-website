@@ -3,12 +3,12 @@ import Image from 'next/image';
 export function ParentTrust() {
   return (
     <section className="min-h-screen h-[100dvh] overflow-hidden bg-[linear-gradient(180deg,_#FFDDE2_0%,_#FFB4CE_100%)] px-4 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-6">
-      <div className="mx-auto h-full max-w-[1620px]">
-        <div className="h-full overflow-y-auto">
-          <div className="grid gap-3 lg:min-h-[10rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
-            <div className="grid gap-3 lg:grid-rows-[62fr_38fr] lg:gap-4">
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr] lg:gap-4">
-                <article className="relative flex h-full min-h-[22rem] overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-5 sm:min-h-[24rem] sm:p-6 lg:min-h-[30rem] lg:p-8">
+      <div className="mx-auto h-full max-w-[1380px]">
+        <div className="h-full">
+          <div className="grid h-full min-h-0 gap-3 lg:min-h-[10rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
+            <div className="grid h-full min-h-0 gap-3 lg:grid-rows-[62fr_38fr] lg:gap-4">
+              <div className="grid h-full min-h-0 gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr] lg:gap-4">
+                <article className="relative flex h-full min-h-0 overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
                   <div className="relative z-10 max-w-[58%]">
                     <h3 className="font-display text-[2rem] font-black leading-[1.05] text-black sm:text-[2.25rem] lg:text-[3.3rem]">
                       Your child&apos;s
@@ -44,7 +44,7 @@ export function ParentTrust() {
                   />
                 </article>
 
-                <article className="relative flex h-full min-h-[22rem] flex-col overflow-hidden rounded-[2.5rem] bg-[#CDBAAB]">
+                <article className="relative flex h-full min-h-0 flex-col overflow-hidden rounded-[2.5rem] bg-[#CDBAAB]">
                   <h3 className="absolute inset-x-0 top-5 z-10 px-3 text-center font-display text-[1.65rem] font-black leading-tight text-black sm:text-[1.9rem] lg:top-6 lg:text-[2.2rem]">
                     Make it truly theirs
                   </h3>
@@ -52,15 +52,15 @@ export function ParentTrust() {
                     src="/assets/parent-trust/image 37.png"
                     alt="parent control card"
                     width={900}
-                    height={1030}
+                    height={1130}
                     sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 360px"
-                    className="absolute inset-x-0 bottom-0 mx-auto h-[82%] w-[90%] object-contain object-bottom sm:h-[84%] sm:w-[89%] lg:h-[86%] lg:w-[87%]"
+                    className="absolute inset-x-0 bottom-0 mx-auto h-[92%] w-[90%] object-contain object-bottom sm:h-[95%] sm:w-[89%] lg:h-[98%] lg:w-[87%]"
                   />
                 </article>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-2 lg:gap-4">
-                <article className="flex h-full overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
+              <div className="grid h-full min-h-0 gap-3 sm:grid-cols-2 lg:gap-4">
+                <article className="flex h-full min-h-0 overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-3 sm:p-4 lg:p-5">
                   <div className="flex w-full items-end gap-4 lg:gap-5">
                     <div className="min-w-0 max-w-[46%]">
                       <h3 className="font-display text-[1.65rem] font-black leading-[1.08] text-black sm:text-[1.9rem] lg:text-[2.4rem]">
@@ -96,7 +96,7 @@ export function ParentTrust() {
                   </div>
                 </article>
 
-                <article className="flex h-full overflow-hidden rounded-[2.5rem] bg-[#F8AFA6] p-4 sm:p-5 lg:p-6">
+                <article className="flex h-full min-h-0 overflow-hidden rounded-[2.5rem] bg-[#F8AFA6] p-3 sm:p-4 lg:p-5">
                   <div className="flex w-full items-end gap-4 lg:gap-5">
                     <div className="min-w-0 max-w-[46%]">
                       <h3 className="font-display text-[1.65rem] font-black leading-[1.08] text-black sm:text-[1.9rem] lg:text-[2.4rem]">
@@ -134,8 +134,8 @@ export function ParentTrust() {
               </div>
             </div>
 
-            <div className="grid gap-3 lg:grid-rows-[4fr_1fr] lg:gap-4">
-              <article className="flex h-full flex-col overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
+            <div className="grid h-full min-h-0 gap-3 lg:grid-rows-[4fr_1fr] lg:gap-4">
+              <article className="flex h-full min-h-0 flex-col overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-3 sm:p-4 lg:p-5">
                 <h3 className="font-display text-[2rem] font-black leading-[1.07] text-black sm:text-[2.2rem] lg:text-[2.5rem]">
                   Your child&apos;s new best
                   <br />
@@ -156,12 +156,12 @@ export function ParentTrust() {
                     width={960}
                     height={1370}
                     sizes="(max-width: 640px) 86vw, (max-width: 1024px) 45vw, 430px"
-                    className="h-auto w-full max-w-[16rem] object-contain sm:max-w-[18.5rem] lg:max-w-[24rem]"
+                    className="h-auto w-full max-w-[16rem] object-contain sm:max-w-[18.5rem] lg:max-w-[20rem]"
                   />
                 </div>
               </article>
 
-              <article className="flex h-full flex-col justify-center rounded-[2.5rem] bg-[#FADCD9] p-5 sm:p-6 lg:p-7">
+              <article className="flex h-full min-h-0 flex-col justify-center rounded-[2.5rem] bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
                 <div className="flex items-center gap-4 lg:gap-5">
                   <Image
                     src="/assets/parent-trust/offline-icon.png"
