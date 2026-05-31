@@ -18,7 +18,7 @@ export function Capabilities() {
   return (
     <section
       id="features"
-      className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,#efe0a2_0%,#f2e4ab_54%,#f3e7bd_100%)] px-5 pb-12 pt-24 sm:px-8 sm:pb-16 sm:pt-28 lg:px-12 lg:pb-20"
+      className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,#FFE991_0%,#FFEFD9_100%)] px-5 pb-12 pt-24 sm:px-8 sm:pb-16 sm:pt-28 lg:px-12 lg:pb-20"
     >
       <div className="mx-auto max-w-[2010px]">
         <div className="mx-auto max-w-[1000px] text-center">
@@ -33,7 +33,7 @@ export function Capabilities() {
         <div className="mt-12 grid gap-12 md:grid-cols-3 md:gap-9 lg:mt-16 lg:gap-14">
           {siteContent.capabilities.cards.map((card) => (
             <article key={card.title} className="min-w-0 text-center md:text-left">
-              <div className="mx-auto w-[80%] overflow-hidden rounded-[2.25rem] bg-[#eadcb1] md:ml-0 md:mr-auto">
+              <div className="mx-auto w-[80%] overflow-hidden rounded-[2.25rem] bg-[#FFEFD9] md:ml-0 md:mr-auto">
                 <Image
                   src={featureImages[card.imageKey]}
                   alt={featureAlts[card.imageKey]}

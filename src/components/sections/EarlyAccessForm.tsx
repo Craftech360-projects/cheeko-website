@@ -54,7 +54,7 @@ export function EarlyAccessForm() {
   return (
     <div className="w-full">
       <form
-        className="flex flex-col gap-3"
+        className="flex flex-col gap-3 [font-family:Inter]"
         aria-label="Early access signup"
         onSubmit={handleSubmit}
         noValidate

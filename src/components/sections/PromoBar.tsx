@@ -3,10 +3,7 @@ import { siteContent } from '@/data/site-content';
 export function PromoBar() {
   const item = (
     <span className="mx-5 inline-flex items-center gap-2 whitespace-nowrap">
-      <span>Launch offer:</span>
-      <strong>20% off</strong>
-      <span>with code</span>
-      <strong>FIRSTUSER</strong>
+      <span>{siteContent.promo.message}</span>
     </span>
   );
 

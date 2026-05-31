@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export function ParentTrust() {
   return (
-    <section className="min-h-screen h-[100dvh] overflow-hidden bg-[linear-gradient(180deg,_#FFDDE2_0%,_#FFB4CE_100%)] px-4 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-6">
-      <div className="mx-auto h-full max-w-[1380px]">
+    <section className="min-h-screen h-[100dvh] overflow-hidden bg-[linear-gradient(180deg,_#FFDDE2_0%,_#FFB4CE_100%)] px-2 py-4 sm:px-4 sm:py-5 lg:px-6 lg:py-6">
+      <div className="mx-auto h-full max-w-[1520px]">
         <div className="h-full">
           <div className="grid h-full min-h-0 gap-3 lg:min-h-[10rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
             <div className="grid h-full min-h-0 gap-3 lg:grid-rows-[62fr_38fr] lg:gap-4">

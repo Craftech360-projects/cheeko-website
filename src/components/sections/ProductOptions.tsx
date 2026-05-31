@@ -14,7 +14,7 @@ export function ProductOptions() {
   return (
     <section
       id="cards"
-      className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,#ffc400_0%,#ffd33a_48%,#fff0aa_100%)] px-5 pb-9 pt-10 sm:px-8 sm:pb-12 sm:pt-11 lg:px-10"
+      className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,#FFC906_0%,#FFD743_50%,#FFE991_100%)] px-5 pb-9 pt-10 sm:px-8 sm:pb-12 sm:pt-11 lg:px-10"
     >
       <div className="mx-auto max-w-[1240px]">
         <div className="text-center">
@@ -47,7 +47,7 @@ export function ProductOptions() {
                   {product.name}
                 </h3>
                 <p className="mt-2 font-display text-[1.85rem] font-medium leading-none text-black">{product.price}</p>
-                <p className="mt-2 max-w-[310px] text-[1.3rem] font-medium leading-[1.08] text-black/55">
+                <p className="mt-2 max-w-[310px] text-[1.2rem] font-regular leading-[1.45] text-black/55">
                   {product.description}
                 </p>
                 <Button

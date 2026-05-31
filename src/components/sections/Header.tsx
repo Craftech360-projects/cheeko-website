@@ -10,14 +10,14 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/35 bg-white/78 backdrop-blur-xl">
-      <div className="flex h-16 w-full items-center justify-between px-4 sm:h-20 sm:px-8 lg:px-10">
+    <header className="sticky top-0 z-40 border-b border-white/30 bg-[rgba(255,255,255,0.75)] backdrop-xl">
+      <div className="flex h-16 w-full items-center justify-between px-4 sm:px-8 lg:px-10">
         <a href="#top" className="inline-flex items-center rounded-xl focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-cheeko-orange" aria-label="Cheeko home">
           <Image src={assets.logo.main} alt="Cheeko" width={164} height={66} priority className="h-11 w-auto sm:h-14" />
         </a>
-        <nav className="hidden items-center gap-8 font-display text-lg font-black text-cheeko-ink md:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-10 [font-family:Inter] text-lg font-black text-cheeko-ink md:flex" aria-label="Primary navigation">
           {siteContent.navigation.map((item) => (
-            <a key={item.href} href={item.href} className="rounded-xl px-2 py-1 transition hover:text-cheeko-orange focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-cheeko-orange">
+            <a key={item.href} href={item.href} className="rounded-xl px-4 py-1 transition hover:text-cheeko-orange focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-cheeko-orange">
               {item.label}
             </a>
           ))}
@@ -59,7 +59,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="rounded-xl px-3 py-2 font-display text-lg font-black text-cheeko-ink transition hover:bg-cheeko-yellow/45 hover:text-cheeko-orange focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-cheeko-orange"
+                className="rounded-xl px-3 py-2 [font-family:Inter] text-lg font-black text-cheeko-ink transition hover:bg-cheeko-yellow/45 hover:text-cheeko-orange focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-cheeko-orange"
               >
                 {item.label}
               </a>

@@ -13,7 +13,7 @@ export const siteContent = {
     ageRange: '4-12'
   },
   promo: {
-    message: 'Launch offer: 20% off with code FIRSTUSER',
+    message: 'Sale 20% offer on promo FIRSTUSER',
     repeated: ['Launch offer', '20% off', 'FIRSTUSER']
   },
   navigation: [

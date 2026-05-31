@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --font-display: 'Baloo 2', ui-rounded, system-ui, sans-serif;
-  --font-body: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
   --color-cheeko-yellow: #ffc400;
   --color-cheeko-gold: #f8a900;
@@ -37,6 +37,46 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif !important;
+}
+
+main section h1,
+main section h2,
+main section h3,
+main section h4,
+main section h5,
+main section h6 {
+  font-weight: 800 !important;
+}
+
+main section .font-black {
+  font-weight: 800 !important;
+}
+
+main section .font-bold {
+  font-weight: 600 !important;
+}
+
+main section .font-semibold {
+  font-weight: 400 !important;
+}
+
+main section .font-medium {
+  font-weight: 400 !important;
+}
+
+main section p:not([class*='leading-']) {
+  font-weight: 400 !important;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
 }
 
 button,

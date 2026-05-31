@@ -9,7 +9,7 @@ export function MeetCheeko() {
         
         {/* Left Content */}
         <div className="max-w-xl order-2 lg:order-1">
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-cheeko-ink">
+          <h2 className="font-display text-4xl sm:text-4xl lg:text-6xl font-black leading-[1.1] tracking-tight text-cheeko-ink">
             Childhood deserves <br className="hidden sm:block" />
             <span className="text-cheeko-pink">better technology.</span>
           </h2>

@@ -15,7 +15,7 @@ import { ReviewsSection } from '@/components/sections/ReviewsSection';
 
 export default function Home() {
   return (
-    <main className="min-h-dvh overflow-hidden bg-cheeko-cream text-cheeko-ink">
+    <main className="min-h-dvh overflow-x-hidden bg-cheeko-cream text-cheeko-ink">
       <PromoBar />
       <Header />
       <HeroSection />

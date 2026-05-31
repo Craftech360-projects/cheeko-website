@@ -9,7 +9,7 @@ export function HeroSection() {
   const [isMobileFormOpen, setIsMobileFormOpen] = useState(true);
 
   return (
-    <section id="top" className="relative w-full h-[100svh] min-h-screen overflow-hidden bg-cheeko-ink">
+    <section id="top" className="relative -mt-16 w-full h-[100svh] min-h-screen overflow-hidden bg-cheeko-ink">
       {/* Background Image Spread */}
       <Image
         src="/assets/hero/image copy.png"
@@ -58,7 +58,7 @@ export function HeroSection() {
             </div>
 
             <div className="relative z-10 mt-3 text-center sm:mt-5">
-              <h1 className="font-display text-[2.35rem] font-black leading-[0.96] text-[#0c2047] sm:text-[4.1rem]">
+              <h1 className="[font-family:Inter] text-[2.35rem] font-black leading-[0.96] text-[#0c2047] sm:text-[4.1rem]">
                 Cheeko Pro
               </h1>
               <p className="mx-auto mt-2 max-w-[31ch] text-[0.95rem] font-medium leading-[1.35] text-[#474747] sm:mt-3 sm:text-[1rem]">
@@ -146,7 +146,7 @@ export function HeroSection() {
             className="inline-flex h-11 items-center rounded-full bg-[#f95c9b] px-4 font-display text-xs font-black tracking-wide text-white shadow-[0_10px_24px_rgba(249,92,155,0.5)] transition hover:bg-[#f64893] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-cheeko-orange"
             aria-label="Open early access form"
           >
-            Early Access
+            Get Early Access
           </button>
         </div>
       ) : null}

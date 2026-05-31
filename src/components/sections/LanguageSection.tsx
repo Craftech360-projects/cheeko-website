@@ -5,11 +5,13 @@ import { siteContent } from '@/data/site-content';
 
 export function LanguageSection() {
   return (
-    <section className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(90deg,#f0ebc7_0%,#f2dddb_100%)] px-4 pb-14 pt-14 sm:px-8 sm:pb-16 sm:pt-16 lg:px-10 lg:pb-14 lg:pt-12">
-      <div className="pointer-events-none absolute -right-32 top-0 h-full w-[62%] opacity-35">
-        <div className="absolute right-10 top-[-8rem] h-[48rem] w-[48rem] rounded-full border-[6px] border-[#8c8481]/45" />
-        <div className="absolute right-2 top-[-6rem] h-[46rem] w-[46rem] rounded-full border-[6px] border-[#8c8481]/45" />
-        <div className="absolute right-[-8rem] top-[-3rem] h-[44rem] w-[44rem] rounded-full border-[6px] border-[#8c8481]/45" />
+    <section className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(90deg,#FFF8D5_0%,#FFD6E5_100%)] px-4 pb-14 pt-14 sm:px-8 sm:pb-16 sm:pt-16 lg:px-10 lg:pb-14 lg:pt-12">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <svg viewBox="0 0 1200 700" preserveAspectRatio="none" className="h-full w-full">
+          <path d="M 205 700 C 510 560, 915 455, 1190 -28" fill="none" stroke="#b8adac" strokeWidth="5" strokeOpacity="0.5" />
+          <path d="M 245 700 C 550 560, 955 458, 1190 8" fill="none" stroke="#b8adac" strokeWidth="5" strokeOpacity="0.5" />
+          <path d="M 285 700 C 590 563, 995 462, 1190 44" fill="none" stroke="#b8adac" strokeWidth="5" strokeOpacity="0.5" />
+        </svg>
       </div>
 
       <div className="relative mx-auto max-w-[1720px]">
@@ -30,12 +32,12 @@ export function LanguageSection() {
               width={1080}
               height={1520}
               sizes="(max-width: 1024px) 70vw, 620px"
-              className="relative z-10 h-auto w-full scale-[1.01] object-contain lg:translate-x-[-1.8rem] lg:translate-y-5 lg:scale-[1.1]"
+              className="relative z-10 h-auto w-full translate-y-2 scale-[1.01] object-contain sm:translate-y-4 lg:translate-x-[-1.8rem] lg:translate-y-16 lg:scale-[1.1]"
             />
           </div>
 
           <div className="lg:pt-16">
-            <div className="relative mx-auto w-full max-w-[920px] overflow-hidden rounded-[1.6rem] shadow-[0_10px_16px_rgba(0,0,0,0.24)]">
+            <div className="relative mx-auto w-full max-w-[720px] overflow-hidden rounded-[1.6rem] shadow-[0_10px_16px_rgba(0,0,0,0.24)]">
               <Image
                 src={assets.product.languagePanelBg}
                 alt=""
@@ -85,7 +87,7 @@ export function LanguageSection() {
               {Array.from({ length: 10 }).map((_, index) => (
                 <div
                   key={`lang-chip-${index}`}
-                  className="relative overflow-hidden rounded-[1.1rem] shadow-[0_7px_12px_rgba(0,0,0,0.16)]"
+                  className="relative overflow-hidden rounded-[1.1rem]"
                 >
                   <Image
                     src={assets.product.languageChipBg}

@@ -9,7 +9,7 @@ describe('Hero section', () => {
 
     const primaryNavigation = screen.getByRole('navigation', { name: /Primary navigation/i });
 
-    expect(screen.getByLabelText(/Launch offer: 20% off with code FIRSTUSER/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/Sale 20% offer on promo FIRSTUSER/i)).toBeInTheDocument();
     expect(screen.getAllByText(/FIRSTUSER/i).length).toBeGreaterThan(0);
     expect(within(primaryNavigation).getByRole('link', { name: /Features/i })).toHaveAttribute('href', '#features');
     expect(within(primaryNavigation).getByRole('link', { name: /Cards/i })).toHaveAttribute('href', '#cards');
