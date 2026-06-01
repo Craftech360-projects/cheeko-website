@@ -18,11 +18,15 @@ describe('Features and language sections', () => {
   it('renders the language section with mother-tongue messaging and language chips', () => {
     render(<Home />);
 
+    const languageHeading = screen.getByRole('heading', { level: 2, name: /Cheeko Speaks Your Language/i });
+    const languageSection = languageHeading.closest('section');
+
     expect(screen.getByRole('heading', { level: 2, name: /Cheeko Speaks Your Language/i })).toBeInTheDocument();
     expect(screen.getAllByText(/mother tongue/i).length).toBeGreaterThan(0);
     expect(screen.getByAltText(/front of the Cheeko device showing the fox assistant/i)).toBeInTheDocument();
     expect(screen.getByText(/Speaking:/i)).toBeInTheDocument();
     expect(screen.getAllByRole('button', { name: /Tap to listen/i }).length).toBeGreaterThan(0);
+    expect(languageSection).toHaveClass('language-laptop-fit');
   });
 
   it('gives the Cheeko language device strong visual prominence', () => {
@@ -30,6 +34,6 @@ describe('Features and language sections', () => {
 
     const device = screen.getByAltText(/front of the Cheeko device showing the fox assistant/i);
 
-    expect(device).toHaveClass('scale-[0.88]', 'lg:translate-x-[-2.6rem]', 'lg:scale-[1.14]');
+    expect(device).toHaveClass('scale-[1.01]', 'lg:translate-x-[-1.8rem]', 'lg:scale-[1.1]');
   });
 });

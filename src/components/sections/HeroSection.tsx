@@ -33,7 +33,7 @@ export function HeroSection() {
       <div className="relative flex h-full items-end pb-8 sm:pb-12 lg:pb-16">
         <div className="w-full flex justify-start">
           <div
-            className={`relative ml-4 mr-4 w-full max-w-[620px] overflow-hidden rounded-[2.2rem] border border-white/70 bg-[#fffdfa] p-4 shadow-[0_28px_70px_-22px_rgba(15,23,42,0.45)] sm:ml-10 sm:mr-0 sm:p-8 lg:ml-16 lg:p-10 ${
+            className={`relative ml-4 mr-4 w-full max-w-[620px] overflow-hidden rounded-[2.2rem] border border-white/70 bg-[#fffdfa] p-4 shadow-[0_28px_70px_-22px_rgba(15,23,42,0.45)] sm:ml-10 sm:mr-0 sm:p-8 lg:ml-16 lg:p-10 xl:origin-bottom-left xl:scale-[0.78] 2xl:scale-[0.7] ${
               isMobileFormOpen ? 'block' : 'hidden md:block'
             }`}
           >

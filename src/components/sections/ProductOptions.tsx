@@ -16,7 +16,7 @@ export function ProductOptions() {
       id="cards"
       className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(180deg,#FFC906_0%,#FFD743_50%,#FFE991_100%)] px-5 pb-9 pt-10 sm:px-8 sm:pb-12 sm:pt-11 lg:px-10"
     >
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto max-w-[1240px] sm:[zoom:clamp(0.74,calc((100svh-2rem)/940px),1)]">
         <div className="text-center">
           <h2 className="font-display text-[2.55rem] font-black leading-none text-black sm:text-[2.75rem]">
             Choose your Cheeko

@@ -8,3 +8,5 @@ coverage
 .vercel
 skills/
 temp_unzip/
+.venv-agent/
+.venv-agent/bin/python
