@@ -13,7 +13,7 @@ describe('Hero section', () => {
     expect(screen.getAllByText(/FIRSTUSER/i).length).toBeGreaterThan(0);
     expect(within(primaryNavigation).getByRole('link', { name: /Features/i })).toHaveAttribute('href', '#features');
     expect(within(primaryNavigation).getByRole('link', { name: /Cards/i })).toHaveAttribute('href', '#cards');
-    expect(within(primaryNavigation).getByRole('link', { name: /Try Demo/i })).toHaveAttribute('href', '#demo');
+    expect(within(primaryNavigation).getByRole('link', { name: /Try Demo/i })).toHaveAttribute('href', '#language');
     expect(within(primaryNavigation).getByRole('link', { name: /Reviews/i })).toHaveAttribute('href', '#reviews');
     expect(screen.getByRole('button', { name: /Open cart/i })).toBeInTheDocument();
     expect(within(screen.getByRole('link', { name: /Cheeko home/i })).getByAltText('Cheeko')).toHaveClass('h-11', 'sm:h-14');

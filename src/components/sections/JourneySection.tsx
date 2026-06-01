@@ -34,7 +34,7 @@ export function JourneySection() {
         </div>
 
         <div className="relative mt-8 md:hidden">
-          <div className="absolute bottom-6 left-4 top-4 border-l-[3px] border-[#f4148f]" />
+          <div className="absolute bottom-5 left-3 top-4 border-l-[3px] border-[#f4148f]" />
           <div className="space-y-5">
             {steps.map((step, index) => (
               <article key={step.title} className="relative pl-12 pr-2">

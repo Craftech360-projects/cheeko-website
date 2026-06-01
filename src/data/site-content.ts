@@ -19,7 +19,7 @@ export const siteContent = {
   navigation: [
     { label: 'Features', href: '#features' },
     { label: 'Cards', href: '#cards' },
-    { label: 'Try Demo', href: '#demo' },
+    { label: 'Try Demo', href: '#language' },
     { label: 'Reviews', href: '#reviews' }
   ],
   hero: {

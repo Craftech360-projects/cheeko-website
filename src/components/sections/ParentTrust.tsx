@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export function ParentTrust() {
   return (
-    <section className="min-h-screen h-[100dvh] overflow-hidden bg-[linear-gradient(180deg,_#FFDDE2_0%,_#FFB4CE_100%)] px-2 py-4 sm:px-4 sm:py-5 lg:px-6 lg:py-6">
-      <div className="mx-auto h-full max-w-[1520px]">
-        <div className="h-full">
-          <div className="grid h-full min-h-0 gap-3 lg:min-h-[10rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
+    <section className="bg-[linear-gradient(180deg,_#FFDDE2_0%,_#FFB4CE_100%)] px-2 py-4 sm:px-4 sm:py-5 lg:min-h-screen lg:h-[100dvh] lg:overflow-hidden lg:px-6 lg:py-6">
+      <div className="mx-auto max-w-[1520px] lg:h-full">
+        <div className="lg:h-full">
+          <div className="grid min-h-0 gap-3 lg:h-full lg:min-h-[10rem] lg:grid-cols-[2fr_1fr] lg:gap-4">
             <div className="grid h-full min-h-0 gap-3 lg:grid-rows-[62fr_38fr] lg:gap-4">
               <div className="grid h-full min-h-0 gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr] lg:gap-4">
                 <article className="relative flex h-full min-h-0 overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-4 sm:p-5 lg:p-6">
@@ -61,7 +61,7 @@ export function ParentTrust() {
 
               <div className="grid h-full min-h-0 gap-3 sm:grid-cols-2 lg:gap-4">
                 <article className="flex h-full min-h-0 overflow-hidden rounded-[2.5rem] bg-[#FADCD9] p-3 sm:p-4 lg:p-5">
-                  <div className="flex w-full items-end gap-4 lg:gap-5">
+                  <div className="flex w-full items-start gap-4 lg:items-end lg:gap-5">
                     <div className="min-w-0 max-w-[46%]">
                       <h3 className="font-display text-[1.65rem] font-black leading-[1.08] text-black sm:text-[1.9rem] lg:text-[2.4rem]">
                         Your child&apos;s
@@ -97,7 +97,7 @@ export function ParentTrust() {
                 </article>
 
                 <article className="flex h-full min-h-0 overflow-hidden rounded-[2.5rem] bg-[#F8AFA6] p-3 sm:p-4 lg:p-5">
-                  <div className="flex w-full items-end gap-4 lg:gap-5">
+                  <div className="flex w-full items-start gap-4 lg:items-end lg:gap-5">
                     <div className="min-w-0 max-w-[46%]">
                       <h3 className="font-display text-[1.65rem] font-black leading-[1.08] text-black sm:text-[1.9rem] lg:text-[2.4rem]">
                         Secure.

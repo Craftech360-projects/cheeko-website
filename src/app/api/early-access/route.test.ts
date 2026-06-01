@@ -1,4 +1,17 @@
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
+
+const { insertMock, fromMock, createClientMock } = vi.hoisted(() => {
+  const insert = vi.fn();
+  const from = vi.fn(() => ({ insert }));
+  const createClient = vi.fn(() => ({ from }));
+
+  return { insertMock: insert, fromMock: from, createClientMock: createClient };
+});
+
+vi.mock('@supabase/supabase-js', () => ({
+  createClient: createClientMock
+}));
+
 import { POST } from './route';
 
 const originalEnv = process.env;
@@ -13,22 +26,28 @@ function requestWithBody(body: unknown) {
 
 describe('early access API route', () => {
   beforeEach(() => {
-    vi.stubGlobal('fetch', vi.fn());
-    process.env = { ...originalEnv, EARLY_ACCESS_WEBHOOK_URL: 'https://script.google.com/macros/s/test/exec' };
+    process.env = {
+      ...originalEnv,
+      NEXT_PUBLIC_SUPABASE_URL: 'https://project-ref.supabase.co',
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_test'
+    };
+    insertMock.mockResolvedValue({ error: null });
+    fromMock.mockReturnValue({ insert: insertMock });
+    createClientMock.mockReturnValue({ from: fromMock });
   });
 
   afterEach(() => {
-    vi.unstubAllGlobals();
+    vi.clearAllMocks();
     process.env = originalEnv;
   });
 
-  it('rejects invalid email submissions before calling Apps Script', async () => {
+  it('rejects invalid email submissions before writing to Supabase', async () => {
     const response = await POST(requestWithBody({ email: 'not-an-email' }));
     const payload = await response.json();
 
     expect(response.status).toBe(400);
     expect(payload.message).toMatch(/valid email/i);
-    expect(fetch).not.toHaveBeenCalled();
+    expect(createClientMock).not.toHaveBeenCalled();
   });
 
   it('silently accepts honeypot submissions without forwarding spam', async () => {
@@ -37,29 +56,34 @@ describe('early access API route', () => {
 
     expect(response.status).toBe(200);
     expect(payload.ok).toBe(true);
-    expect(fetch).not.toHaveBeenCalled();
+    expect(createClientMock).not.toHaveBeenCalled();
   });
 
-  it('forwards valid leads to the configured Google Apps Script webhook', async () => {
-    vi.mocked(fetch).mockResolvedValueOnce(new Response(JSON.stringify({ ok: true }), { status: 200 }));
-
+  it('inserts valid leads into Supabase', async () => {
     const response = await POST(requestWithBody({ email: ' Parent@Example.COM ', source: 'hero' }));
     const payload = await response.json();
 
     expect(response.status).toBe(200);
     expect(payload.message).toMatch(/early access list/i);
-    expect(fetch).toHaveBeenCalledWith(
-      'https://script.google.com/macros/s/test/exec',
+    expect(createClientMock).toHaveBeenCalledWith(
+      'https://project-ref.supabase.co',
+      'sb_publishable_test',
       expect.objectContaining({
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: expect.stringContaining('"email":"parent@example.com"')
+        auth: expect.objectContaining({ persistSession: false })
+      })
+    );
+    expect(fromMock).toHaveBeenCalledWith('early_access');
+    expect(insertMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        email: 'parent@example.com',
+        source: 'hero',
+        user_agent: 'vitest-browser'
       })
     );
   });
 
-  it('returns a helpful error when the webhook is unavailable', async () => {
-    vi.mocked(fetch).mockResolvedValueOnce(new Response('nope', { status: 500 }));
+  it('returns a helpful error when supabase insert fails', async () => {
+    insertMock.mockResolvedValueOnce({ error: { message: 'db down' } });
 
     const response = await POST(requestWithBody({ email: 'parent@example.com' }));
     const payload = await response.json();

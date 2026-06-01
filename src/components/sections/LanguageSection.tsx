@@ -5,7 +5,7 @@ import { siteContent } from '@/data/site-content';
 
 export function LanguageSection() {
   return (
-    <section className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(90deg,#FFF8D5_0%,#FFD6E5_100%)] px-4 pb-14 pt-14 sm:px-8 sm:pb-16 sm:pt-16 lg:px-10 lg:pb-14 lg:pt-12">
+    <section id="language" className="relative min-h-screen min-h-[100svh] overflow-hidden bg-[linear-gradient(90deg,#FFF8D5_0%,#FFD6E5_100%)] px-4 pb-14 pt-14 sm:px-8 sm:pb-16 sm:pt-16 lg:px-10 lg:pb-14 lg:pt-12">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <svg viewBox="0 0 1200 700" preserveAspectRatio="none" className="h-full w-full">
           <path d="M 205 700 C 510 560, 915 455, 1190 -28" fill="none" stroke="#b8adac" strokeWidth="5" strokeOpacity="0.5" />
