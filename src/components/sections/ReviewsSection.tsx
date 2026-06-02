@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { siteContent } from '@/data/site-content';
 
 export function ReviewsSection() {
-  const cards = siteContent.reviews.testimonials.slice(0, 4);
+  const cards = siteContent.reviews.testimonials;
   const tapeColors = ['#bf9ce7', '#eba1cb', '#efd172', '#cfe1a2'];
 
   return (
@@ -35,9 +35,16 @@ export function ReviewsSection() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div
+          data-testid="reviews-scroll-row"
+          className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 lg:mt-14 lg:gap-6"
+        >
           {cards.map((item, index) => (
-            <article key={item.author} className="rounded-[2rem] bg-[#f9f4f6] p-4 shadow-[0_6px_0_rgba(0,0,0,0.08)] lg:p-5">
+            <article
+              key={`${item.author}-${index}`}
+              data-testid="review-card"
+              className="w-[min(86vw,24rem)] shrink-0 snap-start rounded-[2rem] bg-[#f9f4f6] p-4 shadow-[0_6px_0_rgba(0,0,0,0.08)] sm:w-[22rem] lg:w-[24rem] lg:p-5"
+            >
               <div className="relative overflow-hidden rounded-[1.35rem] border-[10px] border-white bg-[#e1d4d7]">
                 <div className="relative aspect-[4/3] w-full">
                   <Image

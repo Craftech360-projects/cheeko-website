@@ -180,6 +180,30 @@ export const siteContent = {
           'It keeps play focused. Cards, stories, and radio make it feel intentional instead of endless scrolling.',
         author: 'Rahul',
         role: 'Parent of two'
+      },
+      {
+        quote:
+          'My son keeps coming back to the stories and little routines. It feels calm instead of overstimulating.',
+        author: 'Devika',
+        role: 'Parent of a 6-year-old'
+      },
+      {
+        quote:
+          'We bought it for weekends, but now it is part of our daily rhythm. The cards make starting play easy.',
+        author: 'Sanjay',
+        role: 'Parent of an 8-year-old'
+      },
+      {
+        quote:
+          'The best part is that Cheeko still feels magical to my daughter without turning into another screen habit.',
+        author: 'Farah',
+        role: 'Parent of a 4-year-old'
+      },
+      {
+        quote:
+          'Grandparents could figure it out quickly, which made it easier to share across the family.',
+        author: 'Leena',
+        role: 'Family buyer'
       }
     ]
   },

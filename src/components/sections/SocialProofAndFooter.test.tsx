@@ -13,6 +13,7 @@ describe('Sprint 6 social proof, originals, journey, and footer', () => {
     expect(screen.getByText(/Avg Rating/i)).toBeInTheDocument();
     expect(screen.getByText(/1 hr/i)).toBeInTheDocument();
     expect(screen.getByText(/Screen time reduced/i)).toBeInTheDocument();
+    expect(screen.getAllByTestId('review-card').length).toBeGreaterThan(4);
     expect(screen.getAllByText(/Cheeko/i).length).toBeGreaterThan(3);
   });
 
